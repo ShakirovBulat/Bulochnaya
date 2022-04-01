@@ -1,4 +1,4 @@
-﻿<Page x:Class="Bulochnaya.Vhod"
+﻿<Window x:Class="Bulochnaya.Vhod"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,7 +7,7 @@
        mc:Ignorable="d" 
       d:DesignHeight="450"
       Title="Vhod"
-      Background="#E0D7D7" Width="330.317">
+      Background="#E0D7D7" Width="330.317" Closing="Window_Closing">
 
     <Grid>
         <Border Background="Black" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="330"/>
@@ -41,4 +41,4 @@
 
 
     </Grid>
-</Page>
+</Window>

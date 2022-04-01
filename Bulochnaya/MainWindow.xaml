@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800"
         Background="#E0D7D7">
     <Grid>
-        <Image Source="C:\Users\user\source\repos\Bulochnaya\Bulochnaya\Images\LogoBread.png" Margin="0,10,0,109"></Image>
+        <Image x:Name="Image1" Source="Images/LogoBread.png" Margin="0,10,0,109"></Image>
         <Button HorizontalAlignment="Left" Margin="406,343,0,0" VerticalAlignment="Top" Width="141" Height="41" Click="Button_Click_Vhod">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">

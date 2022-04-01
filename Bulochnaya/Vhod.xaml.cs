@@ -18,11 +18,17 @@ namespace Bulochnaya
     /// <summary>
     /// Логика взаимодействия для Vhod.xaml
     /// </summary>
-    public partial class Vhod : Page
+    public partial class Vhod : Window
     {
         public Vhod()
         {
             InitializeComponent();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MainWindow wd = new MainWindow();
+            wd.Show();
         }
     }
 }

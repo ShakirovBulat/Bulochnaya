@@ -27,12 +27,16 @@ namespace Bulochnaya
 
         private void Button_Click_Vhod(object sender, RoutedEventArgs e)
         {
-
+            Vhod log = new Vhod();
+            log.Show();
+            this.Close();
         }
 
-        private void Button_Click_Reg(object sender, RoutedEventArgs e)
+    private void Button_Click_Reg(object sender, RoutedEventArgs e)
         {
-
+            Registration reg = new Registration();
+            reg.Show();
+            this.Close();
         }
     }
 }

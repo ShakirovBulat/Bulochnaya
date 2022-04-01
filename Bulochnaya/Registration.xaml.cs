@@ -18,11 +18,17 @@ namespace Bulochnaya
     /// <summary>
     /// Логика взаимодействия для Registration.xaml
     /// </summary>
-    public partial class Registration : Page
+    public partial class Registration : Window
     {
         public Registration()
         {
             InitializeComponent();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MainWindow wd = new MainWindow();
+            wd.Show();
         }
     }
 }
