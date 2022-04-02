@@ -18,9 +18,9 @@ namespace Bulochnaya
     /// <summary>
     /// Логика взаимодействия для Vhod.xaml
     /// </summary>
-    public partial class Vhod : Window
+    public partial class Login : Window
     {
-        public Vhod()
+        public Login()
         {
             InitializeComponent();
         }

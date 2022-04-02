@@ -27,7 +27,7 @@ namespace Bulochnaya
 
         private void Button_Click_Vhod(object sender, RoutedEventArgs e)
         {
-            Vhod log = new Vhod();
+            Login log = new Login();
             log.Show();
             this.Close();
         }
