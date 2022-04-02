@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Bulochnaya.Class;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +31,14 @@ namespace Bulochnaya
         {
             MainWindow wd = new MainWindow();
             wd.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Users us = new Users(Convert.ToString(Nickname.Text), Convert.ToString(email.Text), Convert.ToString(password.Text), double.Parse(phone.Text));
+            us.Add(us);
+            MessageBox.Show("Занесено в базу!");
+            this.Close();
         }
     }
 }

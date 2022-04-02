@@ -12,28 +12,28 @@
     <Grid>
         <Border Background="Black" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="330"/>
         <Label Content="Регистрация" HorizontalAlignment="Left" Margin="94,1,0,0" VerticalAlignment="Top" Foreground="White" Width="144" FontSize="22"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="68,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="White">
+        <TextBox x:Name="Nickname" HorizontalAlignment="Left" Height="23" Margin="68,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="White">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="68,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="White">
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="23" Margin="68,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="White">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="68,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="White">
+        <TextBox x:Name="password" HorizontalAlignment="Left" Height="23" Margin="68,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="White">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="68,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="White">
+        <TextBox x:Name="phone" HorizontalAlignment="Left" Height="23" Margin="68,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="White">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -44,7 +44,7 @@
         <Label Content="E-mail" HorizontalAlignment="Left" Margin="68,103,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Пароль" HorizontalAlignment="Left" Margin="68,144,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Телефон" HorizontalAlignment="Left" Margin="68,189,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button HorizontalAlignment="Left" Margin="94,290,0,0" VerticalAlignment="Top" Width="126" Height="44">
+        <Button HorizontalAlignment="Left" Margin="94,290,0,0" VerticalAlignment="Top" Width="126" Height="44" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="20"/>
