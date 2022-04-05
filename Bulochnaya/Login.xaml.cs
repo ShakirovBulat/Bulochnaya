@@ -33,7 +33,7 @@ namespace Bulochnaya
             wd.Show();
         }
 
-        private bool Auth(string nickname, string password)
+        public bool Auth(string nickname, string password)
         {
             if (string.IsNullOrEmpty(nickname) || string.IsNullOrEmpty(password))
             {

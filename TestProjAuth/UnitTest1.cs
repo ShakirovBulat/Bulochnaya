@@ -13,5 +13,11 @@ namespace TestProjAuth
             var authpage = new Login();
             Assert.IsTrue(authpage.Auth("",""));
         }
+        [TestMethod]
+        public void TestMethod2()
+        {
+            var authpage = new Login();
+            Assert.IsFalse(authpage.Auth("", ""));
+        }
     }
 }
