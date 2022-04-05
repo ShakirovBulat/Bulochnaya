@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bulochnaya"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920"
+        Title="MainWindow" Height="500" Width="400"
         Background="#E0D7D7">
     <Grid>
         <Image x:Name="Image1" Source="Images/LogoBread.png" Margin="96,0,72,119"></Image>
-        <Button HorizontalAlignment="Left" Margin="1048,889,0,0" VerticalAlignment="Top" Width="372" Height="104" Click="Button_Click_Vhod" Cursor="Hand" BorderBrush="#FF707070">
+        <Button HorizontalAlignment="Left" Margin="198,242,0,0" VerticalAlignment="Top" Width="162" Height="48" Click="Button_Click_Vhod" Cursor="Hand" BorderBrush="#FF707070">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="60"/>
@@ -46,12 +46,12 @@
                     </Setter>
                 </Style>
             </Button.Resources>
-            
+
             <Button.Background>
                 <ImageBrush ImageSource="Images/Войти.png"/>
             </Button.Background>
         </Button>
-        <Button  HorizontalAlignment="Left" Margin="502,889,0,0" VerticalAlignment="Top" Width="338" Height="104" Click="Button_Click_Reg" Cursor="Hand">
+        <Button  HorizontalAlignment="Left" Margin="45,242,0,0" VerticalAlignment="Top" Width="148" Height="48" Click="Button_Click_Reg" Cursor="Hand">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="60"/>

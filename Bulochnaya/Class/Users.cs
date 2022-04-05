@@ -61,7 +61,7 @@ namespace Bulochnaya.Class
             MongoClient client = new MongoClient();
             var abase = client.GetDatabase("111");
             var b = abase.GetCollection<Users>("Shakirov_DB");
-            var listPerson = b.Find(Bulochnaya => us._name == "nick").ToList();
+            var listPerson = b.Find(Bulochnaya => us._name == "").ToList();
             var listPersonP = b.Find(Bulochnaya => us._password == "").ToList();
             foreach (Users us1 in listPerson)
             {

@@ -35,7 +35,10 @@ namespace Bulochnaya
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Users us = new Users(Convert.ToString(Nickname.Text), Convert.ToString(email.Text), Convert.ToString(password.Text), double.Parse(phone.Text));
+            Users us = new Users(Convert.ToString(Nickname.Text),
+                                 Convert.ToString(email.Text),
+                                 Convert.ToString(password.Text),
+                                 double.Parse(phone.Text));
             us.Add(us);
             MessageBox.Show("Занесено в базу!");
             this.Close();

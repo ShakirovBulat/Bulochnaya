@@ -33,11 +33,24 @@ namespace Bulochnaya
             wd.Show();
         }
 
+        private bool Auth(string nickname, string password)
+        {
+            if (string.IsNullOrEmpty(nickname) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Введите логин или пароль");
+                return false;
+            }
+            else
+            {
+                Users us = new Users(Convert.ToString(nickname), Convert.ToString(password));
+                us.FindFrom(us);
+                MessageBox.Show($"Добро пожаловать {nickname}");
+            }
+            return true;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Users us = new Users(Convert.ToString(nickname.Text), Convert.ToString(password.Text));
-            us.FindFrom(us);
-            MessageBox.Show("Занесено в базу!");
+            Auth(nickname.Text, password.Text);
         }
     }
 }
