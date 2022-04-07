@@ -50,6 +50,8 @@ namespace Bulochnaya
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            MenuPage wd = new MenuPage();
+            wd.Show();
             Auth(nickname.Text, password.Text);
         }
     }

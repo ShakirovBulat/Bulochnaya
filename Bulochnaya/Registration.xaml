@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450"
       Title="Registration"
-      Background="#E0D7D7" Width="330.317" Closing="Window_Closing">
+      Background="#E0D7D7" Width="330.317" Closing="Window_Closing" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <Grid>
         <Border Background="Black" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="330"/>
