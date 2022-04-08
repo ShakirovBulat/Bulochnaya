@@ -19,32 +19,26 @@ namespace Bulochnaya.Class
         protected string Email;
         protected string Password;
         protected double Phone;
-        private string v1;
-        private string v2;
-        private string v3;
-        private double v4;
 
         public Users(string v1, string v2, string v3, double v4)
         {
-            this.v1 = v1;
-            this.v2 = v2;
-            this.v3 = v3;
-            this.v4 = v4;
+            this.Name = v1;
+            this.Email = v2;
+            this.Password = v3;
+            this.Phone = v4;
         }
 
-        public Users(string v1, string v3)
+        public Users()
         {
-            this.v1 = v1;
-            this.v3 = v3;
         }
 
-        public string _name { get => v1; set => Name = value; }
+        public string _name { get => Name; set => Name = value; }
         [BsonElement]
-        public string _email { get => v2; set => Email = value; }
+        public string _email { get => Email; set => Email = value; }
         [BsonElement]
-        public string _password{ get => v3; set => Password = value; }
+        public string _password{ get => Password; set => Password = value; }
         [BsonElement]
-        public double _phone { get => v4; set => Phone = value; }
+        public double _phone { get => Phone; set => Phone = value; }
 
 
 
