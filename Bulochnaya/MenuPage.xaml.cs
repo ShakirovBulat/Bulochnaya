@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bulochnaya.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,27 @@ namespace Bulochnaya
         public MenuPage()
         {
             InitializeComponent();
+        }
+
+        private void MenuItem_Click_To_Order(object sender, RoutedEventArgs e)
+        {
+            Order ord = new Order();
+            ord.Show();
+            this.Close();
+        }
+
+        private void MenuItem_Click_To_News(object sender, RoutedEventArgs e)
+        {
+            News s = new News();
+            s.Show();
+            this.Close();
+        }
+
+        private void MenuItem_Click_To_Menu(object sender, RoutedEventArgs e)
+        {
+            News s = new News();
+            s.Show();
+            this.Close();
         }
     }
 }

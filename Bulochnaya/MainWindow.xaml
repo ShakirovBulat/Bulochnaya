@@ -13,7 +13,7 @@
             <RowDefinition Height="47*"/>
         </Grid.RowDefinitions>
         <Image x:Name="Image1" Source="Images/LogoBread.png" Margin="96,0,72,72"></Image>
-        <Button HorizontalAlignment="Stretch" Margin="1017,888,517,0" VerticalAlignment="Stretch" Click="Button_Click_Vhod" Cursor="Hand" BorderBrush="#FF707070">
+        <Button HorizontalAlignment="Right" Margin="0,0,294,0" VerticalAlignment="Bottom" Click="Button_Click_Vhod" Cursor="Hand" BorderBrush="#FF707070" Height="114" Width="378">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="60"/>
@@ -55,7 +55,7 @@
                 <ImageBrush ImageSource="Images/Войти.png"/>
             </Button.Background>
         </Button>
-        <Button  HorizontalAlignment="Stretch" Margin="474,888,1086,0" VerticalAlignment="Stretch" Click="Button_Click_Reg" Cursor="Hand">
+        <Button  HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Bottom" Click="Button_Click_Reg" Cursor="Hand" Height="114" Width="352">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="60"/>
