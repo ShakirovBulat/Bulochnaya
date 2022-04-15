@@ -42,9 +42,17 @@ namespace Bulochnaya
             var abase = client.GetDatabase("111");
             var b = abase.GetCollection<Users>("Shakirov_DB");
             var listPerson = b.Find(Bulochnaya => Bulochnaya._name == nickname && Bulochnaya._password == password).ToList().FirstOrDefault();
-            if (string.IsNullOrEmpty(nickname) || string.IsNullOrEmpty(password) || listPerson == null)
+            if (nickname == "admin" && password == "gg")
             {
-                MessageBox.Show("Введите логин и пароль или неправильные данные");
+                MessageBox.Show($"Добро пожаловать Администратор");
+                MenuPage wd = new MenuPage();
+                wd.Show();
+                wd.news.Visibility = Visibility.Visible;
+                wd.menu.Visibility = Visibility.Visible;
+            }
+            else if (string.IsNullOrEmpty(nickname) || string.IsNullOrEmpty(password) || listPerson == null)
+            {
+                MessageBox.Show("Введите логин и пароль или введены неправильные данные");
                 return false;
             }
             else if (listPerson != null)
@@ -52,7 +60,10 @@ namespace Bulochnaya
                 MessageBox.Show($"Добро пожаловать {nickname}");
                 MenuPage wd = new MenuPage();
                 wd.Show();
+                wd.news.Visibility = Visibility.Hidden;
+                wd.menu.Visibility = Visibility.Hidden;
             }
+            
             return true;
         }
         private void Button_Click(object sender, RoutedEventArgs e)

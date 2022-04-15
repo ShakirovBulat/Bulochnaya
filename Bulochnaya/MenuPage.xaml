@@ -10,11 +10,14 @@
 
     <Grid>
         <Menu Height="25" VerticalAlignment="Top" Background="LightGray">
-            <MenuItem Header="Заказы" Height="25" Width="50" Click="MenuItem_Click_To_Order">
+            <MenuItem Header="Заказы" Click="MenuItem_Click_To_Order">
             </MenuItem>
-            <MenuItem Header="Новости" Height="25" Width="58" Click="MenuItem_Click_To_News">
+            <MenuItem Header="Новости" Click="MenuItem_Click_To_News">
             </MenuItem>
             <MenuItem Header="Меню" Height="25" Click="MenuItem_Click_To_Menu"></MenuItem>
+            <MenuItem x:Name="news" Header="Добавить новость" Click="news_Click"/>
+            <MenuItem x:Name="menu" Header="Добавить новое изделие"/>
         </Menu>
+        
     </Grid>
 </Window>

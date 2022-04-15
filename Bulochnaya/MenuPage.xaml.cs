@@ -43,5 +43,10 @@ namespace Bulochnaya
             s.Show();
             this.Close();
         }
+
+        private void news_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
