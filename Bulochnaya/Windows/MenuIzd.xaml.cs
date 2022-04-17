@@ -15,13 +15,19 @@ using System.Windows.Shapes;
 namespace Bulochnaya.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для NewsAddPage.xaml
+    /// Логика взаимодействия для MenuIzd.xaml
     /// </summary>
-    public partial class NewsAddPage : Window
+    public partial class MenuIzd : Window
     {
-        public NewsAddPage()
+        public MenuIzd()
         {
             InitializeComponent();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MenuPage wd = new MenuPage();
+            wd.Show();
         }
     }
 }

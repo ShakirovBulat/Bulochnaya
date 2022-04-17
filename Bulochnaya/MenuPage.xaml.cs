@@ -39,14 +39,10 @@ namespace Bulochnaya
 
         private void MenuItem_Click_To_Menu(object sender, RoutedEventArgs e)
         {
-            News s = new News();
-            s.Show();
+            MenuIzd menu = new MenuIzd();
+            menu.Show();
             this.Close();
         }
 
-        private void news_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

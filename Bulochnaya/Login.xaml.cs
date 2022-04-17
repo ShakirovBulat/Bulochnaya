@@ -47,7 +47,6 @@ namespace Bulochnaya
                 MessageBox.Show($"Добро пожаловать Администратор");
                 MenuPage wd = new MenuPage();
                 wd.Show();
-                wd.news.Visibility = Visibility.Visible;
                 wd.menu.Visibility = Visibility.Visible;
             }
             else if (string.IsNullOrEmpty(nickname) || string.IsNullOrEmpty(password) || listPerson == null)
@@ -60,7 +59,6 @@ namespace Bulochnaya
                 MessageBox.Show($"Добро пожаловать {nickname}");
                 MenuPage wd = new MenuPage();
                 wd.Show();
-                wd.news.Visibility = Visibility.Hidden;
                 wd.menu.Visibility = Visibility.Hidden;
             }
             

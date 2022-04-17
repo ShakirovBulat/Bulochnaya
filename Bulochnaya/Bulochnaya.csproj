@@ -150,17 +150,14 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\MenuAddPage.xaml.cs">
       <DependentUpon>MenuAddPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\MenuIzd.xaml.cs">
+      <DependentUpon>MenuIzd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\News.xaml.cs">
       <DependentUpon>News.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\NewsAddPage.xaml.cs">
-      <DependentUpon>NewsAddPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Order.xaml.cs">
       <DependentUpon>Order.xaml</DependentUpon>
@@ -189,19 +186,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\Menu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Windows\MenuAddPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\News.xaml">
+    <Page Include="Windows\MenuIzd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\NewsAddPage.xaml">
+    <Page Include="Windows\News.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -262,6 +255,7 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy32.dll" />
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
+    <Resource Include="Images\zavod.jpg" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
