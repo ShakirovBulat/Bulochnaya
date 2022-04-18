@@ -24,10 +24,6 @@ namespace Bulochnaya.Windows
             InitializeComponent();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            MenuPage wd = new MenuPage();
-            wd.Show();
-        }
+
     }
 }

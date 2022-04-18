@@ -27,21 +27,18 @@ namespace Bulochnaya
         {
             Order ord = new Order();
             ord.Show();
-            this.Close();
         }
 
         private void MenuItem_Click_To_News(object sender, RoutedEventArgs e)
         {
             News s = new News();
             s.Show();
-            this.Close();
         }
 
         private void MenuItem_Click_To_Menu(object sender, RoutedEventArgs e)
         {
             MenuIzd menu = new MenuIzd();
             menu.Show();
-            this.Close();
         }
 
     }
