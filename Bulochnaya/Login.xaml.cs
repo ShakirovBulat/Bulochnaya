@@ -1,20 +1,4 @@
-﻿using Bulochnaya.Class;
-using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Bulochnaya
 {
@@ -23,9 +7,7 @@ namespace Bulochnaya
     /// </summary>
     public partial class Login : Window
     {
-        MongoClient client = new MongoClient();
-        
-        Users us = new Users();
+      
         public Login()
         {
             InitializeComponent();
@@ -37,37 +19,9 @@ namespace Bulochnaya
             wd.Show();
         }
 
-        public bool Auth(string nickname, string password)
-        {
-            var abase = client.GetDatabase("111");
-            var b = abase.GetCollection<Users>("Shakirov_DB");
-            var listPerson = b.Find(Bulochnaya => Bulochnaya._name == nickname && Bulochnaya._password == password).ToList().FirstOrDefault();
-            if (nickname == "admin" && password == "gg")
-            {
-                MessageBox.Show($"Добро пожаловать Администратор");
-                MenuPage wd = new MenuPage();
-                wd.Show();
-                wd.menu.Visibility = Visibility.Visible;
-            }
-            else if (string.IsNullOrEmpty(nickname) || string.IsNullOrEmpty(password) || listPerson == null)
-            {
-                MessageBox.Show("Введите логин и пароль или введены неправильные данные");
-                return false;
-            }
-            else if (listPerson != null)
-            {
-                MessageBox.Show($"Добро пожаловать {nickname}");
-                MenuPage wd = new MenuPage();
-                wd.Show();
-                wd.menu.Visibility = Visibility.Hidden;
-            }
-            
-            return true;
-        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
-            Auth(nickname.Text, password.Text);
         }
     }
 }
