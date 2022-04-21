@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="Id_Tovar" />
           </Key>
-          <Property Name="Id_Tovar" Type="int" Nullable="false" />
+          <Property Name="Id_Tovar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" />
           <Property Name="Description" Type="varchar" MaxLength="500" />
           <Property Name="Id_review" Type="int" Nullable="false" />
@@ -18,7 +18,7 @@
           <Key>
             <PropertyRef Name="Id_review" />
           </Key>
-          <Property Name="Id_review" Type="int" Nullable="false" />
+          <Property Name="Id_review" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Review" Type="varchar" MaxLength="50" />
           <Property Name="Rating" Type="float" />
           <Property Name="Id" Type="int" Nullable="false" />
@@ -37,7 +37,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Login" Type="varchar" MaxLength="50" />
           <Property Name="Email" Type="varchar" MaxLength="50" />
           <Property Name="Password" Type="varchar" MaxLength="50" />
@@ -90,7 +90,7 @@
           <Key>
             <PropertyRef Name="Id_Tovar" />
           </Key>
-          <Property Name="Id_Tovar" Type="Int32" Nullable="false" />
+          <Property Name="Id_Tovar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Id_review" Type="Int32" Nullable="false" />
@@ -100,7 +100,7 @@
           <Key>
             <PropertyRef Name="Id_review" />
           </Key>
-          <Property Name="Id_review" Type="Int32" Nullable="false" />
+          <Property Name="Id_review" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Review" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Rating" Type="Double" />
           <Property Name="Id" Type="Int32" Nullable="false" />
@@ -121,7 +121,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -152,7 +152,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BakeryEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BakeryEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Menu" EntityType="Self.Menu" />
           <EntitySet Name="Reviews" EntityType="Self.Reviews" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -171,7 +171,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище BakeryModelContainer" CdmEntityContainer="BakeryEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище BakeryModelContainer" CdmEntityContainer="BakeryEntities1">
           <EntitySetMapping Name="Menu">
             <EntityTypeMapping TypeName="BakeryModel.Menu">
               <MappingFragment StoreEntitySet="Menu">
