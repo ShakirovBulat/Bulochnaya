@@ -22,14 +22,8 @@
                         <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="auto"></RowDefinition>
                     </Grid.RowDefinitions>
-                    <Image Width="400" Grid.Row="1" Stretch="UniformToFill" HorizontalAlignment="Center" Margin="5">
-                        <Image.Source>
-                            <Binding Path="ImageTovar">
-                                <Binding.TargetNullValue>
-                                    <Image Source="{Binding Path=ImageTovar}" />
-                                </Binding.TargetNullValue>
-                            </Binding>
-                        </Image.Source>
+                        <Image Width="400" Grid.Row="1" Stretch="UniformToFill" HorizontalAlignment="Center" Margin="5" Source="{Binding ImageTovar}">
+                            
                     </Image>
                 </Grid>
             </DataTemplate>
