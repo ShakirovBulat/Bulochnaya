@@ -12,16 +12,17 @@
           <Property Name="Id_Tovar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" />
           <Property Name="Description" Type="varchar" MaxLength="500" />
-          <Property Name="Id_review" Type="int" Nullable="false" />
+          <Property Name="ImageTovar" Type="image" />
+          <Property Name="Id_review" Type="int" />
         </EntityType>
         <EntityType Name="Reviews">
           <Key>
             <PropertyRef Name="Id_review" />
           </Key>
-          <Property Name="Id_review" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id_review" Type="int" Nullable="false" />
           <Property Name="Review" Type="varchar" MaxLength="50" />
           <Property Name="Rating" Type="float" />
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -44,7 +45,7 @@
           <Property Name="Phone" Type="int" />
         </EntityType>
         <Association Name="FK_Menu_Reviews">
-          <End Role="Reviews" Type="Self.Reviews" Multiplicity="1" />
+          <End Role="Reviews" Type="Self.Reviews" Multiplicity="0..1" />
           <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Reviews">
@@ -93,17 +94,18 @@
           <Property Name="Id_Tovar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="Id_review" Type="Int32" Nullable="false" />
+          <Property Name="ImageTovar" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Id_review" Type="Int32" />
           <NavigationProperty Name="Reviews" Relationship="Self.FK_Menu_Reviews" FromRole="Menu" ToRole="Reviews" />
         </EntityType>
         <EntityType Name="Reviews">
           <Key>
             <PropertyRef Name="Id_review" />
           </Key>
-          <Property Name="Id_review" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id_review" Type="Int32" Nullable="false" />
           <Property Name="Review" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Rating" Type="Double" />
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Menu" Relationship="Self.FK_Menu_Reviews" FromRole="Reviews" ToRole="Menu" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Reviews_Users" FromRole="Reviews" ToRole="Users" />
         </EntityType>
@@ -129,7 +131,7 @@
           <NavigationProperty Name="Reviews" Relationship="Self.FK_Reviews_Users" FromRole="Users" ToRole="Reviews" />
         </EntityType>
         <Association Name="FK_Menu_Reviews">
-          <End Role="Reviews" Type="Self.Reviews" Multiplicity="1" />
+          <End Role="Reviews" Type="Self.Reviews" Multiplicity="0..1" />
           <End Role="Menu" Type="Self.Menu" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Reviews">
@@ -152,7 +154,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BakeryEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BakeryEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Menu" EntityType="Self.Menu" />
           <EntitySet Name="Reviews" EntityType="Self.Reviews" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -171,13 +173,14 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище BakeryModelContainer" CdmEntityContainer="BakeryEntities1">
+        <EntityContainerMapping StorageEntityContainer="Хранилище BakeryModelContainer" CdmEntityContainer="BakeryEntities2">
           <EntitySetMapping Name="Menu">
             <EntityTypeMapping TypeName="BakeryModel.Menu">
               <MappingFragment StoreEntitySet="Menu">
                 <ScalarProperty Name="Id_Tovar" ColumnName="Id_Tovar" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ImageTovar" ColumnName="ImageTovar" />
                 <ScalarProperty Name="Id_review" ColumnName="Id_review" />
               </MappingFragment>
             </EntityTypeMapping>

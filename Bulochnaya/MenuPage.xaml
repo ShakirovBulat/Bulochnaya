@@ -15,7 +15,7 @@
             <MenuItem Header="Новости" Click="MenuItem_Click_To_News">
             </MenuItem>
             <MenuItem Header="Меню" Height="25" Click="MenuItem_Click_To_Menu"></MenuItem>
-            <MenuItem x:Name="menu" Header="Добавить новое изделие"/>
+            <MenuItem x:Name="menu" Header="Добавить новое изделие" Click="menu_Click"/>
         </Menu>
         <TextBlock HorizontalAlignment="Center" Text="История хлебозавода" FontWeight="Bold"  VerticalAlignment="Top" Margin="326,25,336,0" FontSize="36"/>
         <TextBlock HorizontalAlignment="Center" Text="АО «Казанский хлебозавод №13»" FontWeight="Bold"  VerticalAlignment="Top" Margin="758,78,754,0" FontSize="24"/>

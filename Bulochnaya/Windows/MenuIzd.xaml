@@ -7,6 +7,33 @@
         mc:Ignorable="d"
         Title="MenuIzd" Height="450" Width="800" WindowState="Maximized" ResizeMode="NoResize">
     <Grid>
-        
+        <ListView x:Name="Grof" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
+        <ListView.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
+            </ItemsPanelTemplate>
+        </ListView.ItemsPanel>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <Grid Margin="20" Width="400">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"></RowDefinition>
+                        <RowDefinition Height="310"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Image Width="400" Grid.Row="1" Stretch="UniformToFill" HorizontalAlignment="Center" Margin="5">
+                        <Image.Source>
+                            <Binding Path="ImageTovar">
+                                <Binding.TargetNullValue>
+                                    <Image Source="{Binding Path=ImageTovar}" />
+                                </Binding.TargetNullValue>
+                            </Binding>
+                        </Image.Source>
+                    </Image>
+                </Grid>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
     </Grid>
 </Window>

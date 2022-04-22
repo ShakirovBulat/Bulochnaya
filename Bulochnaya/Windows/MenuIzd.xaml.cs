@@ -19,11 +19,11 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class MenuIzd : Window
     {
+        public static BakeryEntities2 db = new BakeryEntities2();
         public MenuIzd()
         {
             InitializeComponent();
+            Grof.ItemsSource = db.Menu.ToList();
         }
-
-
     }
 }

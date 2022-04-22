@@ -23,7 +23,7 @@ namespace Bulochnaya
         {
             foreach (var user in MainWindow.db.Users)
             {
-                if (user.Login == (nickname.Text = "nick") && user.Password == (password.Text = "gg"))
+                if (nickname.Text == "nick" && password.Text == "gg")
                 {
                     MessageBox.Show($"Привет админ {user.Login}");
                     MenuPage menu = new MenuPage();
@@ -37,6 +37,12 @@ namespace Bulochnaya
                     MenuPage menu = new MenuPage();
                     menu.menu.Visibility = Visibility.Hidden;
                     menu.Show();
+                }
+                else if (user.Login != nickname.Text.Trim() || user.Password != password.Text.Trim())
+                {
+                    MessageBox.Show($"Неправильный логин или пароль!");
+                    nickname.Text = null;
+                    password.Text = null;
                 }
             }
         }

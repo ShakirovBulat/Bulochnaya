@@ -17,7 +17,8 @@ namespace Bulochnaya
         public int Id_Tovar { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public int Id_review { get; set; }
+        public byte[] ImageTovar { get; set; }
+        public Nullable<int> Id_review { get; set; }
     
         public virtual Reviews Reviews { get; set; }
     }

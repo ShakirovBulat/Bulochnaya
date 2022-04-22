@@ -4,9 +4,51 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bulochnaya.Windows"
-        mc:Ignorable="d"
-        Title="MenuAddPage" Height="450" Width="800">
+      Title="MenuAddPage"
+      Background="#E0D7D7" Width="330.317" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Height="437.597">
     <Grid>
-        
+        <Border Background="Black" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="322"/>
+        <Label Content="Вход" HorizontalAlignment="Left" Margin="134,0,0,0" VerticalAlignment="Top" Foreground="White" Width="99" FontSize="22"/>
+        <TextBox x:Name="name"  HorizontalAlignment="Left" Height="23" Margin="66,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="#FFFFFBFB">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="description" HorizontalAlignment="Left" Height="72" Margin="66,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="White">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Label Content="Название" HorizontalAlignment="Left" Margin="66,56,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Описание" HorizontalAlignment="Left" Margin="66,115,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Картинка" HorizontalAlignment="Left" Margin="66,218,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="add" HorizontalAlignment="Left" Margin="88,348,0,0" VerticalAlignment="Top" Width="126" Height="44" Click="add_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="/Bulochnaya;component/Images/Add.png"/>
+            </Button.Background>
+        </Button>
+        <Image x:Name="img" HorizontalAlignment="Left" Height="100" Margin="52,238,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="download" HorizontalAlignment="Left" Margin="157,243,0,0" VerticalAlignment="Top" Width="109" Height="33" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="/Bulochnaya;component/Images/downloading.png"/>
+            </Button.Background>
+        </Button>
+
+
     </Grid>
 </Window>
