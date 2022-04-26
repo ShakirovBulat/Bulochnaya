@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using Microsoft.Win32;
 
@@ -10,31 +12,41 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class MenuAddPage : Window
     {
+        OpenFileDialog ofdImage1 = new OpenFileDialog();
         public MenuAddPage()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void download_Click_1(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
+            OpenFileDialog ofdImage = new OpenFileDialog();
+            ofdImage.Filter = "Image files|*.bmp;*.jpg;*.png|All files|*.*";
+            ofdImage.FilterIndex = 1;
+            if (ofdImage.ShowDialog() == true)
             {
-                Uri fileUri = new Uri(openFileDialog.FileName);
-                img.Source = new BitmapImage(fileUri);
+                BitmapImage image = new BitmapImage();
+                image.BeginInit();
+                image.UriSource = new Uri(ofdImage.FileName);
+                image.EndInit();
+                ofdImage1 = ofdImage;
+                img.Source = image;
             }
         }
 
-        private void add_Click(object sender, RoutedEventArgs e)
+        public void add_Click(object sender, RoutedEventArgs e)
         {
             Menu menu = new Menu();
             menu.Name = name.Text.ToString();
             menu.Description = description.Text.ToString();
-            menu.ImageTovar = System.Text.Encoding.Default.GetBytes(img.ToString());
+            
+            menu.ImageTovar = File.ReadAllBytes(ofdImage1.FileName);
 
             MainWindow.db.Menu.Add(menu);
             MainWindow.db.SaveChanges();
             MessageBox.Show("Succesfull");
         }
+
+        
     }
 }

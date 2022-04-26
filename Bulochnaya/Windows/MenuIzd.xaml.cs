@@ -23,6 +23,7 @@ namespace Bulochnaya.Windows
         public MenuIzd()
         {
             InitializeComponent();
+            db = new BakeryEntities2();
             Grof.ItemsSource = db.Menu.ToList();
         }
     }

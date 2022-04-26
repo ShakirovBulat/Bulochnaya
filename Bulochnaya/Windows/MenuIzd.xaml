@@ -22,10 +22,8 @@
                         <RowDefinition Height="auto"></RowDefinition>
                         <RowDefinition Height="auto"></RowDefinition>
                     </Grid.RowDefinitions>
-                        <Image Width="400" Grid.Row="1" Stretch="UniformToFill" HorizontalAlignment="Center" Margin="5" Source="{Binding ImageTovar}">
-                            
-                    </Image>
-                </Grid>
+                        <Image Width="300" Grid.Row="1" Stretch="UniformToFill" HorizontalAlignment="Center" Margin="5" Source="{Binding ImageTovar}"/>
+                    </Grid>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
