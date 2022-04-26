@@ -8,12 +8,16 @@
         Title="MainWindow" Height="1080" Width="1920"
         Background="#E0D7D7" WindowState="Maximized">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="947*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1002*"/>
             <RowDefinition Height="47*"/>
         </Grid.RowDefinitions>
-        <Image x:Name="Image1" Source="Images/LogoBread.png" Margin="96,0,72,72"></Image>
-        <Button HorizontalAlignment="Right" Margin="0,0,294,0" VerticalAlignment="Bottom" Click="Button_Click_Vhod" Cursor="Hand" BorderBrush="#FF707070" Height="114" Width="378">
+        <Image x:Name="Image1" Source="Images/LogoBread.png" Margin="96,0,54.182,72"></Image>
+        <Button HorizontalAlignment="Right" Margin="0,0,276.182,0" VerticalAlignment="Bottom" Click="Button_Click_Vhod" Cursor="Hand" BorderBrush="#FF707070" Height="114" Width="378">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="60"/>

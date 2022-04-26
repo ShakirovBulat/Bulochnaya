@@ -197,6 +197,9 @@
     <Compile Include="Windows\Order.xaml.cs">
       <DependentUpon>Order.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\TovarPage.xaml.cs">
+      <DependentUpon>TovarPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -234,6 +237,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Order.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\TovarPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -303,6 +310,8 @@
     <Resource Include="Images\zavod.jpg" />
     <Resource Include="Images\Add.png" />
     <Resource Include="Images\downloading.png" />
+    <Resource Include="Images\reviews.png" />
+    <Resource Include="Images\inOrder.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup>

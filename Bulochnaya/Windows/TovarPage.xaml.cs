@@ -15,22 +15,13 @@ using System.Windows.Shapes;
 namespace Bulochnaya.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для MenuIzd.xaml
+    /// Логика взаимодействия для TovarPage.xaml
     /// </summary>
-    public partial class MenuIzd : Window
+    public partial class TovarPage : Window
     {
-        public static BakeryEntities2 db = new BakeryEntities2();
-        public MenuIzd()
+        public TovarPage()
         {
             InitializeComponent();
-            db = new BakeryEntities2();
-            Grof.ItemsSource = db.Menu.ToList();
-        }
-
-        private void Image_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-            MessageBox.Show("Lets Go!");
         }
     }
 }
