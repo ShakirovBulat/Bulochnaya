@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:Bulochnaya.Windows"
         mc:Ignorable="d"
         Title="TovarPage" Height="550" Width="350" Background="#FFE0D7D7">
-    <Grid>
-        <Image Margin="68,44,0,0" Height="207" VerticalAlignment="Top" HorizontalAlignment="Left" Width="212" Source="{Binding ImageTovar}" />
-        <Label HorizontalAlignment="Left" Margin="136,0,0,480" VerticalAlignment="Bottom" FontSize="22" Content="{Binding Name}" Height="29" Width="78"/>
-        <Label HorizontalAlignment="Left" Margin="68,256,0,0" VerticalAlignment="Top" Height="209" Width="212" FontSize="18" Content="{Binding Description}"/>
+    <Grid x:Name="Tovar">
+        <Image x:Name="ggImg" Margin="68,44,0,0" Height="207" VerticalAlignment="Top" HorizontalAlignment="Left" Width="212" Source="{Binding ImageTovar}" />
+        <Label x:Name="lbl1Img" HorizontalAlignment="Left" Margin="136,0,0,480" VerticalAlignment="Bottom" FontSize="22" Content="{Binding Name}" Height="39" Width="78"/>
+        <Label x:Name="lbl2Img" HorizontalAlignment="Left" Margin="68,256,0,0" VerticalAlignment="Top" Height="209" Width="212" FontSize="18" Content="{Binding Description}"/>
         <Button x:Name="review" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Width="109" Height="34">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,20 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class TovarPage : Window
     {
-        public TovarPage()
+        public static BakeryEntities2 db;
+        public TovarPage(Menu menu)
         {
             InitializeComponent();
+            db = new BakeryEntities2();
+            MemoryStream byteStream = new MemoryStream(menu.ImageTovar);
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.StreamSource = byteStream;
+            image.EndInit();
+            ggImg.Source = image;
+            lbl1Img.Content = menu.Name;
+            lbl2Img.Content = menu.Description;
+
         }
     }
 }
