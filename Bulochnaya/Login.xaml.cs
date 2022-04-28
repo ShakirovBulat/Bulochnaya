@@ -8,6 +8,7 @@ namespace Bulochnaya
     public partial class Login : Window
     {
       
+        public static Users logUser = new Users();
         public Login()
         {
             InitializeComponent();
@@ -19,26 +20,28 @@ namespace Bulochnaya
             wd.Show();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void Button_Click(object sender, RoutedEventArgs e)
         {
             foreach (var user in MainWindow.db.Users)
             {
-                if (nickname.Text == "nick" && password.Text == "gg")
+                if (nickname.Text.Trim() == user.Name && nickname.Text == "nick" && user.Password == password.Text.Trim() && password.Text == "gg")
                 {
-                    MessageBox.Show($"Привет админ {user.Login}");
+                    logUser = user;
+                    MessageBox.Show($"Привет админ {user.Name}");
                     MenuPage menu = new MenuPage();
                     menu.menu.Visibility = Visibility.Visible;
                     menu.Show();
                 }
-                else if (user.Login == nickname.Text.Trim() && user.Password == password.Text.Trim())
+                else if (user.Name == nickname.Text.Trim() && user.Password == password.Text.Trim())
                 {
-                    MessageBox.Show($"Привет Пользователь {user.Login}");
+                    logUser = user;
+                    MessageBox.Show($"Привет Пользователь {user.Name}");
                     MainWindow.authUser = user;
                     MenuPage menu = new MenuPage();
                     menu.menu.Visibility = Visibility.Hidden;
                     menu.Show();
                 }
-                else if (user.Login != nickname.Text.Trim() || user.Password != password.Text.Trim())
+                else if (user.Name != nickname.Text.Trim() && user.Password != password.Text.Trim())
                 {
                     MessageBox.Show($"Неправильный логин или пароль!");
                     nickname.Text = null;

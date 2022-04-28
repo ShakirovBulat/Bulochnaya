@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,29 +15,22 @@ using System.Windows.Shapes;
 namespace Bulochnaya.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для TovarPage.xaml
+    /// Логика взаимодействия для ReviewsPage.xaml
     /// </summary>
-    public partial class TovarPage : Window
+    public partial class ReviewsPage : Window
     {
-        public static BakeryEntities2 db;
-        public TovarPage(Menu menu)
+        BakeryEntities2 db = new BakeryEntities2();
+        public ReviewsPage()
         {
             InitializeComponent();
             db = new BakeryEntities2();
-            MemoryStream byteStream = new MemoryStream(menu.ImageTovar);
-            BitmapImage image = new BitmapImage();
-            image.BeginInit();
-            image.StreamSource = byteStream;
-            image.EndInit();
-            ggImg.Source = image;
-            lbl1Img.Content = menu.Name;
-            lbl2Img.Content = menu.Description;
-
+            Grof.ItemsSource = db.Reviews.ToList();
+            Grof.ItemsSource = db.Menu.ToList();
         }
 
         private void review_Click(object sender, RoutedEventArgs e)
         {
-            ReviewsPage rev = new ReviewsPage();
+            AddReviewPage rev = new AddReviewPage();
             rev.Show();
         }
     }

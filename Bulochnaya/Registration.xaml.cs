@@ -30,7 +30,7 @@ namespace Bulochnaya
                 try
                 {
                     Users client = new Users();
-                    client.Login = Nickname.Text.ToString();
+                    client.Name = Nickname.Text.ToString();
                     client.Email = email.Text.ToString();
                     client.Password = password.Text.ToString();
                     client.Phone = Convert.ToInt32(phone.Text);

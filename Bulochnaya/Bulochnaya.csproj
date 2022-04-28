@@ -191,6 +191,9 @@
     <Compile Include="Users.cs">
       <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
     </Compile>
+    <Compile Include="Windows\AddReviewPage.xaml.cs">
+      <DependentUpon>AddReviewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\MenuAddPage.xaml.cs">
       <DependentUpon>MenuAddPage.xaml</DependentUpon>
     </Compile>
@@ -202,6 +205,9 @@
     </Compile>
     <Compile Include="Windows\Order.xaml.cs">
       <DependentUpon>Order.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ReviewsPage.xaml.cs">
+      <DependentUpon>ReviewsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\TovarPage.xaml.cs">
       <DependentUpon>TovarPage.xaml</DependentUpon>
@@ -230,6 +236,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\AddReviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MenuAddPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -243,6 +253,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\Order.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ReviewsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -303,6 +317,13 @@
     <Resource Include="Images\Vhod.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\zavod.jpg" />
+    <Resource Include="Images\Add.png" />
+    <Resource Include="Images\downloading.png" />
+    <Resource Include="Images\reviews.png" />
+    <Resource Include="Images\inOrder.png" />
+    <Resource Include="Images\addreview.png" />
+    <Resource Include="Images\Go.png" />
     <Content Include="Bulochnaya_BD.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Bulochnaya_BD.edmx</DependentUpon>
@@ -313,11 +334,6 @@
       <DependentUpon>Bulochnaya_BD.edmx</DependentUpon>
       <LastGenOutput>Bulochnaya_BD.cs</LastGenOutput>
     </Content>
-    <Resource Include="Images\zavod.jpg" />
-    <Resource Include="Images\Add.png" />
-    <Resource Include="Images\downloading.png" />
-    <Resource Include="Images\reviews.png" />
-    <Resource Include="Images\inOrder.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup>
