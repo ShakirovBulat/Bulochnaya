@@ -17,7 +17,7 @@ namespace Bulochnaya
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Reviews()
         {
-            this.Menu = new HashSet<Menu>();
+            this.ReviewsTovar = new HashSet<ReviewsTovar>();
         }
     
         public int Id_review { get; set; }
@@ -25,8 +25,8 @@ namespace Bulochnaya
         public Nullable<double> Rating { get; set; }
         public Nullable<int> Id { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Menu> Menu { get; set; }
         public virtual Users Users { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ReviewsTovar> ReviewsTovar { get; set; }
     }
 }

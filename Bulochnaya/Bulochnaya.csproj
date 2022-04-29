@@ -155,23 +155,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Bulochnaya_BD.Context.cs">
+    <Compile Include="Bulochnaya_DB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Bulochnaya_BD.Context.tt</DependentUpon>
+      <DependentUpon>Bulochnaya_DB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Bulochnaya_BD.cs">
+    <Compile Include="Bulochnaya_DB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Bulochnaya_BD.Designer.cs">
+    <Compile Include="Bulochnaya_DB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Bulochnaya_BD.edmx</DependentUpon>
+      <DependentUpon>Bulochnaya_DB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
@@ -183,13 +183,22 @@
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Reviews.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewsTovar.cs">
+      <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
     </Compile>
     <Compile Include="Windows\AddReviewPage.xaml.cs">
       <DependentUpon>AddReviewPage.xaml</DependentUpon>
@@ -283,12 +292,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Bulochnaya_BD.edmx">
+    <EntityDeploy Include="Bulochnaya_DB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Bulochnaya_BD.Designer.cs</LastGenOutput>
+      <LastGenOutput>Bulochnaya_DB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Bulochnaya_BD.edmx.diagram">
-      <DependentUpon>Bulochnaya_BD.edmx</DependentUpon>
+    <None Include="Bulochnaya_DB.edmx.diagram">
+      <DependentUpon>Bulochnaya_DB.edmx</DependentUpon>
     </None>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
@@ -324,15 +333,15 @@
     <Resource Include="Images\inOrder.png" />
     <Resource Include="Images\addreview.png" />
     <Resource Include="Images\Go.png" />
-    <Content Include="Bulochnaya_BD.Context.tt">
+    <Content Include="Bulochnaya_DB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Bulochnaya_BD.edmx</DependentUpon>
-      <LastGenOutput>Bulochnaya_BD.Context.cs</LastGenOutput>
+      <DependentUpon>Bulochnaya_DB.edmx</DependentUpon>
+      <LastGenOutput>Bulochnaya_DB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Bulochnaya_BD.tt">
+    <Content Include="Bulochnaya_DB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Bulochnaya_BD.edmx</DependentUpon>
-      <LastGenOutput>Bulochnaya_BD.cs</LastGenOutput>
+      <DependentUpon>Bulochnaya_DB.edmx</DependentUpon>
+      <LastGenOutput>Bulochnaya_DB.cs</LastGenOutput>
     </Content>
     <Content Include="mongocrypt.dll" />
   </ItemGroup>

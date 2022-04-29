@@ -19,13 +19,12 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class ReviewsPage : Window
     {
-        BakeryEntities2 db = new BakeryEntities2();
+        Bakery2Entities db = new Bakery2Entities();
         public ReviewsPage()
         {
             InitializeComponent();
-            db = new BakeryEntities2();
+            db = new Bakery2Entities();
             Grof.ItemsSource = db.Reviews.ToList();
-            
         }
 
         private void review_Click(object sender, RoutedEventArgs e)

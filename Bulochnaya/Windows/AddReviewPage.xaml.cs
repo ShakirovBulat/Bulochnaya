@@ -29,12 +29,16 @@ namespace Bulochnaya.Windows
         {
             Reviews rev = new Reviews();
             Menu menu = new Menu();
+            ReviewsTovar rev2 = new ReviewsTovar();
             rev.Review = review.Text.ToString();
             rev.Rating = BasicRatingBar.Value;
             rev.Id = Login.logUser.Id;
-            menu.Id_review = rev.Id_review;
+            rev2.Id_Tovar = menu.Id_Tovar;
+            rev2.Id_review = rev.Id_review;
+            
 
             MainWindow.db.Reviews.Add(rev);
+            MainWindow.db.ReviewsTovar.Add(rev2);
             MainWindow.db.SaveChanges();
             MessageBox.Show("Succesfull");
         }

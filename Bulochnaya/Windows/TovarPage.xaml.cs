@@ -20,11 +20,11 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class TovarPage : Window
     {
-        public static BakeryEntities2 db;
+        public static Bakery2Entities db;
         public TovarPage(Menu menu)
         {
             InitializeComponent();
-            db = new BakeryEntities2();
+            db = new Bakery2Entities();
             MemoryStream byteStream = new MemoryStream(menu.ImageTovar);
             BitmapImage image = new BitmapImage();
             image.BeginInit();

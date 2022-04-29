@@ -10,22 +10,13 @@
 namespace Bulochnaya
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Menu
+    public partial class sp_helpdiagrams_Result
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Menu()
-        {
-            this.ReviewsTovar = new HashSet<ReviewsTovar>();
-        }
-    
-        public int Id_Tovar { get; set; }
+        public string Database { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public byte[] ImageTovar { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ReviewsTovar> ReviewsTovar { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }
