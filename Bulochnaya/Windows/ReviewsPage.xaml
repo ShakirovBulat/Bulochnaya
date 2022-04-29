@@ -7,12 +7,15 @@
         mc:Ignorable="d"
         Title="ReviewsPage" Height="450" Width="340.26">
     <Grid>
-        <ListView x:Name="Grof" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Left" Margin="0,43,0,0">
-            <StackPanel Background="#F19561">
-                <Label Content="{Binding Review}" Height="58" Margin="10,0"/>
-                <Label  Width="87" HorizontalAlignment="Center" Content="{Binding Name}" Height="29"/>
-                <materialDesign:RatingBar Value="{Binding Rating}" Margin="95,0,109,0" Width="114"/>
-            </StackPanel>
+        <ListView x:Name="Grof" HorizontalContentAlignment="Left" Margin="0,43,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate x:Name="Grof2">
+                    <StackPanel Background="#F19561">
+                        <Label Content="{Binding Review}" Height="58" Margin="10,0" IsEnabled="True"/>
+                        <materialDesign:RatingBar Value="{Binding Rating}" Margin="95,0,109,0" Width="114" IsEnabled="False" Opacity="1"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
         <Button x:Name="review" HorizontalAlignment="Left" Margin="5,4,0,0" VerticalAlignment="Top" Width="109" Height="34" Click="review_Click">
             <Button.Resources>

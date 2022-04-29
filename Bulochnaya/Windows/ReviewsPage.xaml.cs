@@ -25,7 +25,7 @@ namespace Bulochnaya.Windows
             InitializeComponent();
             db = new BakeryEntities2();
             Grof.ItemsSource = db.Reviews.ToList();
-            Grof.ItemsSource = db.Menu.ToList();
+            
         }
 
         private void review_Click(object sender, RoutedEventArgs e)
