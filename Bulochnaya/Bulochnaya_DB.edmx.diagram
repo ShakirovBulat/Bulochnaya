@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="30f048fe0d4a4298b3ed2099a53f176e" Name="Diagram1">
-        <EntityTypeShape EntityType="Bakery2Model.Menu" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+      <Diagram DiagramId="f011dfaa8d154d1ea9f48676624293c3" Name="Diagram1">
+        <EntityTypeShape EntityType="Bakery2Model.Menu" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="Bakery2Model.Reviews" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Bakery2Model.ReviewsTovar" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Bakery2Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />

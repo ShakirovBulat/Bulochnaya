@@ -20,17 +20,23 @@ namespace Bulochnaya.Windows
     public partial class ReviewsPage : Window
     {
         Bakery2Entities db = new Bakery2Entities();
-        public ReviewsPage()
+        public ReviewsPage(Menu menu)
         {
             InitializeComponent();
-            db = new Bakery2Entities();
-            Grof.ItemsSource = db.Reviews.ToList();
+            Grof.ItemsSource = db.ReviewsTovar.Where(c => c.Id_Tovar == menu.Id_Tovar).ToList();
         }
 
         private void review_Click(object sender, RoutedEventArgs e)
         {
             AddReviewPage rev = new AddReviewPage();
             rev.Show();
+            this.Close();
+        }
+
+        private void Grof_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ReviewsTovarPage rov = new ReviewsTovarPage();
+            rov.Show();
         }
     }
 }

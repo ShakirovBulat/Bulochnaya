@@ -21,9 +21,11 @@ namespace Bulochnaya.Windows
     public partial class TovarPage : Window
     {
         public static Bakery2Entities db;
+        Menu clickedMenu;
         public TovarPage(Menu menu)
         {
             InitializeComponent();
+            clickedMenu = menu;
             db = new Bakery2Entities();
             MemoryStream byteStream = new MemoryStream(menu.ImageTovar);
             BitmapImage image = new BitmapImage();
@@ -38,8 +40,10 @@ namespace Bulochnaya.Windows
 
         private void review_Click(object sender, RoutedEventArgs e)
         {
-            ReviewsPage rev = new ReviewsPage();
+            
+            ReviewsPage rev = new ReviewsPage(clickedMenu);
             rev.Show();
+            this.Close();
         }
     }
 }

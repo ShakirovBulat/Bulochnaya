@@ -188,12 +188,6 @@
     <Compile Include="ReviewsTovar.cs">
       <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
-    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
     </Compile>
@@ -217,6 +211,9 @@
     </Compile>
     <Compile Include="Windows\ReviewsPage.xaml.cs">
       <DependentUpon>ReviewsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ReviewsTovarPage.xaml.cs">
+      <DependentUpon>ReviewsTovarPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\TovarPage.xaml.cs">
       <DependentUpon>TovarPage.xaml</DependentUpon>
@@ -266,6 +263,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ReviewsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ReviewsTovarPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

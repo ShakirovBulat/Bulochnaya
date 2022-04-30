@@ -14,9 +14,9 @@ namespace Bulochnaya
     
     public partial class ReviewsTovar
     {
-        public int Id_RevTovar { get; set; }
-        public Nullable<int> Id_review { get; set; }
-        public Nullable<int> Id_Tovar { get; set; }
+        public int Id_review { get; set; }
+        public int Id_Tovar { get; set; }
+        public int ID { get; set; }
     
         public virtual Menu Menu { get; set; }
         public virtual Reviews Reviews { get; set; }
