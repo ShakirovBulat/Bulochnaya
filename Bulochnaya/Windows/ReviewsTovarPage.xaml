@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="ReviewsTovarPage" Height="450" Width="348.052">
     <Grid>
-        <Label x:Name="reviewdescription" Content="{Binding Review}" Margin="10,41,10,5" IsEnabled="True"/>
-        <materialDesign:RatingBar x:Name="rating" Value="{Binding Rating}" Width="122" HorizontalAlignment="Center" VerticalAlignment="Top" Height="26" Margin="109,10,109,0" IsEnabled="False" Opacity="1"/>
+        <StackPanel Background="#F19561">
+            <materialDesign:RatingBar x:Name="rating" Value="{Binding Rating}" Margin="95,0,109,0" Width="114" IsEnabled="False" Opacity="1"/>
+            <Label x:Name="labl" Content="{Binding Review}" Height="385" Margin="10,0" IsEnabled="True"/>
+        </StackPanel>
     </Grid>
 </Window>

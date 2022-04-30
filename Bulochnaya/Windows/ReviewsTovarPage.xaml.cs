@@ -23,8 +23,8 @@ namespace Bulochnaya.Windows
         public ReviewsTovarPage()
         {
             InitializeComponent();
-            reviewdescription.Content = rev.Review;
-            //rating.Value = rev.Rating;
+            rating.Value = Convert.ToInt32(rev.Rating);
+            labl.Content = rev.Review;
         }
     }
 }
