@@ -170,6 +170,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Bulochnaya_DB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="inOrder.cs" />
     <Compile Include="Menu.cs">
       <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
     </Compile>
@@ -344,6 +345,7 @@
       <DependentUpon>Bulochnaya_DB.edmx</DependentUpon>
       <LastGenOutput>Bulochnaya_DB.cs</LastGenOutput>
     </Content>
+    <Resource Include="Images\Order.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <ItemGroup>

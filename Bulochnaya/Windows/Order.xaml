@@ -7,6 +7,35 @@
         mc:Ignorable="d"
         Title="Order" Height="450" Width="800" ResizeMode="NoResize" WindowState="Maximized" Background="#FFE0D7D7">
     <Grid>
-        
+        <ListView x:Name="Grof" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" Background="#FFE0D7D7">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="20" Width="400">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"></RowDefinition>
+                            <RowDefinition Height="310"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Width="300" Grid.Row="1" Stretch="UniformToFill" HorizontalAlignment="Center" Margin="5" Source="{Binding ImageTovar}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="add" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="126" Height="44">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="/Bulochnaya;component/Images/Order.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

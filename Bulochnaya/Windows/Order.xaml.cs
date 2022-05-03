@@ -22,6 +22,8 @@ namespace Bulochnaya.Windows
         public Order()
         {
             InitializeComponent();
+            Grof.ItemsSource = inOrder.Projects.ToList();
+            
         }
     }
 }

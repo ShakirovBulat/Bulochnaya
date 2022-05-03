@@ -44,5 +44,10 @@ namespace Bulochnaya.Windows
             rev.Show();
             this.Close();
         }
+
+        private void inorder_Click(object sender, RoutedEventArgs e)
+        {
+            inOrder.Projects.Add(clickedMenu);
+        }
     }
 }
