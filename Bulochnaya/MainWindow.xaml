@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920"
         Background="#E0D7D7" WindowState="Maximized" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="MyBuutonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -21,85 +34,12 @@
         <Image Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Top" x:Name="Image1" Source="Images/LogoBread.png" Width="1400" Grid.RowSpan="3"/>
 
 
-        <Button Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="Button_Click_Vhod" Cursor="Hand" BorderBrush="#FF707070" Height="114" Width="378" Margin="3,0,0,51">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="60"/>
-                </Style>
-                <Style  TargetType="Button">
-                    <Setter Property="Background"
-          Value="gray" />
-                    <Setter Property="HorizontalAlignment"
-          Value="Center" />
-                    <Setter Property="VerticalAlignment"
-          Value="Center" />
-                    <Setter Property="Foreground"
-          Value="Gray" />
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border x:Name="bg"
-                Background="{TemplateBinding Background}"
-                BorderThickness="2"
-                BorderBrush="Gray">
-                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
-                            VerticalAlignment="{TemplateBinding VerticalAlignment}" />
-                                </Border>
-                                <ControlTemplate.Triggers>
-                                    <Trigger Property="IsMouseOver"
-                   Value="True">
-                                        <Setter Property="Background"
-                    Value="#FF5D210B"
-                    TargetName="bg" />
-                                    </Trigger>
-                                </ControlTemplate.Triggers>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Button.Resources>
-
+        <Button Style="{StaticResource MyBuutonStyle}" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="Button_Click_Vhod" Cursor="Hand" BorderBrush="#FF707070" Height="114" Width="378" Margin="0,0,0,51">
             <Button.Background>
                 <ImageBrush ImageSource="Images/Войти.png"/>
             </Button.Background>
         </Button>
-        <Button Grid.Column="0" Grid.Row="2"  HorizontalAlignment="Right" Width="400" VerticalAlignment="Bottom" Click="Button_Click_Reg" Cursor="Hand" Height="114" Margin="0,0,0,51">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="60"/>
-                </Style>
-                <Style  TargetType="Button">
-                    <Setter Property="Background"
-          Value="gray" />
-                    <Setter Property="HorizontalAlignment"
-          Value="Center" />
-                    <Setter Property="VerticalAlignment"
-          Value="Center" />
-                    <Setter Property="Foreground"
-          Value="Gray" />
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type Button}">
-                                <Border x:Name="bg"
-                Background="{TemplateBinding Background}"
-                BorderThickness="2"
-                BorderBrush="Gray">
-                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
-                            VerticalAlignment="{TemplateBinding VerticalAlignment}" />
-                                </Border>
-                                <ControlTemplate.Triggers>
-                                    <Trigger Property="IsMouseOver"
-                   Value="True">
-                                        <Setter Property="Background"
-                    Value="#FF5D210B"
-                    TargetName="bg" />
-                                    </Trigger>
-                                </ControlTemplate.Triggers>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </Button.Resources>
+        <Button Style="{StaticResource MyBuutonStyle}" Grid.Column="0" Grid.Row="2"  HorizontalAlignment="Right" Width="400" VerticalAlignment="Bottom" Click="Button_Click_Reg" Cursor="Hand" Height="114" Margin="0,0,0,51">
             <Button.Background>
                 <ImageBrush ImageSource="Images/Регистрация.png"/>
             </Button.Background>

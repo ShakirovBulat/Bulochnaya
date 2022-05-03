@@ -6,16 +6,24 @@
         xmlns:local="clr-namespace:Bulochnaya.Windows"
         mc:Ignorable="d"
         Title="TovarPage" Height="550" Width="350" Background="#FFE0D7D7" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="MyBuutonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid x:Name="Tovar">
         <Image x:Name="ggImg" Margin="68,44,0,0" Height="207" VerticalAlignment="Top" HorizontalAlignment="Left" Width="212" Source="{Binding ImageTovar}" />
         <Label x:Name="lbl1Img" HorizontalAlignment="Left" Margin="114,0,0,480" VerticalAlignment="Bottom" FontSize="22" Content="{Binding Name}" Height="39" Width="auto"/>
         <Label x:Name="lbl2Img" HorizontalAlignment="Left" Margin="68,256,0,0" VerticalAlignment="Top" Height="209" Width="212" FontSize="18" Content="{Binding Description}"/>
-        <Button x:Name="review" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Width="109" Height="34" Click="review_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="20"/>
-                </Style>
-            </Button.Resources>
+        <Button Style="{StaticResource MyBuutonStyle}" x:Name="review" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Width="109" Height="34" Click="review_Click" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="/Bulochnaya;component/Images/reviews.png"/>
             </Button.Background>

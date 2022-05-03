@@ -6,6 +6,19 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Bulochnaya.Windows.ReviewsPage"
         mc:Ignorable="d"
         Title="ReviewsPage" Height="450" Width="340.26" Background="#FFE0D7D7" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="MyBuutonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <ListView x:Name="Grof" HorizontalContentAlignment="Left" Margin="0,43,0,0" SelectionChanged="Grof_SelectionChanged" Background="#FFE0D7D7">
             <ListView.ItemTemplate>
@@ -16,12 +29,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="review" HorizontalAlignment="Left" Margin="5,4,0,0" VerticalAlignment="Top" Width="109" Height="34" Click="review_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="20"/>
-                </Style>
-            </Button.Resources>
+        <Button Style="{StaticResource MyBuutonStyle}" x:Name="review" HorizontalAlignment="Left" Margin="5,4,0,0" VerticalAlignment="Top" Width="109" Height="34" Click="review_Click" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="/Bulochnaya;component/Images/addreview.png"/>
             </Button.Background>

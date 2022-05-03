@@ -8,7 +8,19 @@
       d:DesignHeight="450"
       Title="Login"
       Background="#E0D7D7" Width="330.317" Closing="Window_Closing" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-
+    <Window.Resources>
+        <Style x:Key="MyBuutonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Border Background="Black" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="324"/>
         <Label Content="Вход" HorizontalAlignment="Left" Margin="134,0,0,0" VerticalAlignment="Top" Foreground="White" Width="99" FontSize="22"/>
@@ -28,12 +40,7 @@
         </TextBox>
         <Label Content="Логин" HorizontalAlignment="Left" Margin="66,125,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Пароль" HorizontalAlignment="Left" Margin="66,173,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button HorizontalAlignment="Left" Margin="94,290,0,0" VerticalAlignment="Top" Width="126" Height="44" Click="Button_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="20"/>
-                </Style>
-            </Button.Resources>
+        <Button Style="{StaticResource MyBuutonStyle}" HorizontalAlignment="Left" Margin="94,290,0,0" VerticalAlignment="Top" Width="126" Height="44" Click="Button_Click" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="Images/Vhod.png"/>
             </Button.Background>
