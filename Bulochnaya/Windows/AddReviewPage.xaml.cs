@@ -20,20 +20,21 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class AddReviewPage : Window
     {
-        public AddReviewPage()
+        Menu clickedmenu;
+        public AddReviewPage(Menu menu)
         {
             InitializeComponent();
+            clickedmenu = menu;
         }
-
+        
         private void inorder_Click(object sender, RoutedEventArgs e)
         {
             Reviews rev = new Reviews();
-            Menu menu = new Menu();
             ReviewsTovar rev2 = new ReviewsTovar();
             rev.Review = review.Text.ToString();
             rev.Rating = BasicRatingBar.Value;
             rev.Id = Login.logUser.Id;
-            rev2.Id_Tovar = menu.Id_Tovar;
+            rev2.Id_Tovar = clickedmenu.Id_Tovar;
             rev2.Id_review = rev.Id_review;
             
 

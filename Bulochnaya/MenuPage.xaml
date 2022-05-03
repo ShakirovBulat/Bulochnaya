@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Bulochnaya"
       mc:Ignorable="d" 
-      d:DesignHeight="900" d:DesignWidth="1440"
-      Title="MenuPage" Background="PeachPuff" Width="1920" Height="1080">
+      d:DesignHeight="900" d:DesignWidth="1600"
+      Title="MenuPage" Background="PeachPuff" Width="1600" Height="900" ResizeMode="NoResize" WindowState="Maximized">
 
     <Grid>
         <Menu Height="25" VerticalAlignment="Top" Background="LightGray">
@@ -18,10 +18,10 @@
             <MenuItem x:Name="menu" Header="Добавить новое изделие" Click="menu_Click"/>
         </Menu>
         <TextBlock HorizontalAlignment="Center" Text="История хлебозавода" FontWeight="Bold"  VerticalAlignment="Top" Margin="326,25,336,0" FontSize="36"/>
-        <TextBlock HorizontalAlignment="Center" Text="АО «Казанский хлебозавод №13»" FontWeight="Bold"  VerticalAlignment="Top" Margin="758,78,754,0" FontSize="24"/>
-        <Image Source="Images/zavod.jpg" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="322,0,345,537" Height="376" Width="1245"/>
-        <TextBlock TextWrapping="Wrap"  VerticalAlignment="Top" Margin="10,512,302,0" TextAlignment="Center" FontStyle="Italic" FontSize="36"><Run>АО «Казанский хлебозавод №13» является одним из старейших производителей хлебобулочных и кондитерских изделий города Казани. История завода богата событиями и традициями, которые сложились благодаря труду и усердию хлебопеков в течение многих лет. Накопленные за десятилетия опыт, принципы деятельности и стремление постоянно развиваться делают предприятие уникальным и по-настоящему интересным»</Run></TextBlock>
-        <TextBlock TextWrapping="Wrap" Margin="322,756,0,0" FontStyle="Italic" TextAlignment="Center" FontSize="36" ><Run>На этом развитие завода не прекращается, традиция предприятия – внедрение новаций в производство. Конечно, возможности дальнейшего расширения производства ограничены местоположением предприятия, поэтому увеличение производственных площадей происходит только за счет перепланировки имеющихся. Практически в каждом цехе и на каждом участке что-то заменено, смонтировано, перестроено. И темпы реконструкции только усиливаются.</Run></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Text="АО «Казанский хлебозавод №13»" FontWeight="Bold"  VerticalAlignment="Top" Margin="580,78,610,0" FontSize="24" Width="404"/>
+        <Image Source="Images/zavod.jpg" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="177,0,172,380" Height="376" Width="1245"/>
+        <TextBlock TextWrapping="Wrap"  VerticalAlignment="Top" Margin="10,512,302,0" TextAlignment="Center" FontStyle="Italic" FontSize="24" Height="143"><Run>АО «Казанский хлебозавод №13» является одним из старейших производителей хлебобулочных и кондитерских изделий города Казани. История завода богата событиями и традициями, которые сложились благодаря труду и усердию хлебопеков в течение многих лет. Накопленные за десятилетия опыт, принципы деятельности и стремление постоянно развиваться делают предприятие уникальным и по-настоящему интересным»</Run></TextBlock>
+        <TextBlock TextWrapping="Wrap" Margin="312,691,10,0" FontStyle="Italic" TextAlignment="Center" FontSize="24" ><Run>На этом развитие завода не прекращается, традиция предприятия – внедрение новаций в производство. Конечно, возможности дальнейшего расширения производства ограничены местоположением предприятия, поэтому увеличение производственных площадей происходит только за счет перепланировки имеющихся. Практически в каждом цехе и на каждом участке что-то заменено, смонтировано, перестроено. И темпы реконструкции только усиливаются.</Run></TextBlock>
     </Grid>
 
 </Window>

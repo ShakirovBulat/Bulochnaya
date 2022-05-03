@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Bulochnaya.Windows"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Bulochnaya.Windows.AddReviewPage"
         mc:Ignorable="d"
-        Title="AddReviewPage" Height="450" Width="359.74">
+        Title="AddReviewPage" Height="450" Width="359.74" Background="#FFE0D7D7" ResizeMode="NoResize">
     <Grid>
 
         <materialDesign:RatingBar x:Name="BasicRatingBar" Value="0" Margin="115,116,117,279" />

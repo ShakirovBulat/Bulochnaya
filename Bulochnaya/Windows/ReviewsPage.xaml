@@ -5,9 +5,9 @@
         xmlns:local="clr-namespace:Bulochnaya.Windows"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Bulochnaya.Windows.ReviewsPage"
         mc:Ignorable="d"
-        Title="ReviewsPage" Height="450" Width="340.26">
+        Title="ReviewsPage" Height="450" Width="340.26" Background="#FFE0D7D7" ResizeMode="NoResize">
     <Grid>
-        <ListView x:Name="Grof" HorizontalContentAlignment="Left" Margin="0,43,0,0" SelectionChanged="Grof_SelectionChanged">
+        <ListView x:Name="Grof" HorizontalContentAlignment="Left" Margin="0,43,0,0" SelectionChanged="Grof_SelectionChanged" Background="#FFE0D7D7">
             <ListView.ItemTemplate>
                 <DataTemplate x:Name="Grof2">
                     <StackPanel Width="320" Background="#F19561">

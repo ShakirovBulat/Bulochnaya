@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bulochnaya.Windows"
         mc:Ignorable="d"
-        Title="MenuIzd" Height="450" Width="800" WindowState="Maximized" ResizeMode="NoResize">
+        Title="MenuIzd" Height="450" Width="800" WindowState="Maximized" ResizeMode="NoResize" Background="#FFE0D7D7">
     <Grid>
-        <ListView x:Name="Grof" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" SelectionChanged="Grof_SelectionChanged">
+        <ListView x:Name="Grof" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" SelectionChanged="Grof_SelectionChanged" Background="#FFE0D7D7">
         <ListView.ItemsPanel>
             <ItemsPanelTemplate>
                 <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>

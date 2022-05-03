@@ -40,7 +40,6 @@ namespace Bulochnaya.Windows
 
         private void review_Click(object sender, RoutedEventArgs e)
         {
-            
             ReviewsPage rev = new ReviewsPage(clickedMenu);
             rev.Show();
             this.Close();

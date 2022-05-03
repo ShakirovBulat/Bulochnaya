@@ -19,12 +19,13 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class ReviewsTovarPage : Window
     {
-        Reviews rev = new Reviews();
-        public ReviewsTovarPage()
+        ReviewsTovar revclick;
+        public ReviewsTovarPage(ReviewsTovar rev)
         {
             InitializeComponent();
-            rating.Value = Convert.ToInt32(rev.Rating);
-            labl.Content = rev.Review;
+            revclick = rev;
+            rating.Value = Convert.ToInt32(revclick.Reviews.Rating);
+            labl.Content = revclick.Reviews.Review;
         }
     }
 }

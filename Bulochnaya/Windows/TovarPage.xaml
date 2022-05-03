@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bulochnaya.Windows"
         mc:Ignorable="d"
-        Title="TovarPage" Height="550" Width="350" Background="#FFE0D7D7">
+        Title="TovarPage" Height="550" Width="350" Background="#FFE0D7D7" ResizeMode="NoResize">
     <Grid x:Name="Tovar">
         <Image x:Name="ggImg" Margin="68,44,0,0" Height="207" VerticalAlignment="Top" HorizontalAlignment="Left" Width="212" Source="{Binding ImageTovar}" />
         <Label x:Name="lbl1Img" HorizontalAlignment="Left" Margin="114,0,0,480" VerticalAlignment="Bottom" FontSize="22" Content="{Binding Name}" Height="39" Width="auto"/>
