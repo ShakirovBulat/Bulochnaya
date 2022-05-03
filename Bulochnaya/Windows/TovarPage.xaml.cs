@@ -34,8 +34,7 @@ namespace Bulochnaya.Windows
             image.EndInit();
             ggImg.Source = image;
             lbl1Img.Content = menu.Name;
-            lbl2Img.Content = menu.Description;
-
+            lbl2Img.Text = menu.Description;
         }
 
         private void review_Click(object sender, RoutedEventArgs e)
