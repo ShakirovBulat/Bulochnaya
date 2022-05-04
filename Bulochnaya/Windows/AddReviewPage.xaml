@@ -21,9 +21,10 @@
         </Style>
     </Window.Resources>
     <Grid>
-
-        <materialDesign:RatingBar x:Name="BasicRatingBar" Value="0" Margin="115,116,117,279" />
-        <TextBox x:Name="review" HorizontalAlignment="Left" Height="152" Margin="69,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" Background="#FF5D210B" Foreground="White">
+        <Border Background="Black" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="354"/>
+        <Label Content="Добавление отзыва" HorizontalAlignment="Left" Margin="75,-2,0,0" VerticalAlignment="Top" Foreground="White" Width="211" FontSize="22"/>
+        <materialDesign:RatingBar x:Name="BasicRatingBar" Value="0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <TextBox x:Name="review" HorizontalAlignment="Left" Height="152" Margin="69,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" Background="#FF5D210B" Foreground="White">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

@@ -1,23 +1,11 @@
 ﻿using Bulochnaya.Windows;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Bulochnaya
 {
     public partial class MenuPage : Window
     {
+        Menu clickedMenu;
         public MenuPage()
         {
             InitializeComponent();
@@ -25,7 +13,7 @@ namespace Bulochnaya
 
         private void MenuItem_Click_To_Order(object sender, RoutedEventArgs e)
         {
-            Order ord = new Order();
+            Order ord = new Order(clickedMenu);
             ord.Show();
         }
 
@@ -45,6 +33,12 @@ namespace Bulochnaya
         {
             MenuAddPage menu = new MenuAddPage();
             menu.Show();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Histori hist = new Histori();
+            hist.Show();
         }
     }
 }

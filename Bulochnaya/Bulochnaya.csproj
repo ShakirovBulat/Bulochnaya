@@ -170,6 +170,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Bulochnaya_DB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="inHistori.cs" />
     <Compile Include="inOrder.cs" />
     <Compile Include="Menu.cs">
       <DependentUpon>Bulochnaya_DB.tt</DependentUpon>
@@ -197,6 +198,9 @@
     </Compile>
     <Compile Include="Windows\AddReviewPage.xaml.cs">
       <DependentUpon>AddReviewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Histori.xaml.cs">
+      <DependentUpon>Histori.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MenuAddPage.xaml.cs">
       <DependentUpon>MenuAddPage.xaml</DependentUpon>
@@ -244,6 +248,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\AddReviewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Histori.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

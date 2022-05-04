@@ -21,7 +21,7 @@
     </Window.Resources>
     <Grid>
         <Border Background="Black" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="322"/>
-        <Label Content="Вход" HorizontalAlignment="Left" Margin="134,0,0,0" VerticalAlignment="Top" Foreground="White" Width="99" FontSize="22"/>
+        <Label Content="Добавление товара" HorizontalAlignment="Left" Margin="66,1,0,0" VerticalAlignment="Top" Foreground="White" Width="218" FontSize="22"/>
         <TextBox x:Name="name"  HorizontalAlignment="Left" Height="23" Margin="66,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Background="#FF5D210B" Foreground="#FFFFFBFB">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">

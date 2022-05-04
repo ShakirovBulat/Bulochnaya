@@ -15,22 +15,16 @@ using System.Windows.Shapes;
 namespace Bulochnaya.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для Order.xaml
+    /// Логика взаимодействия для Histori.xaml
     /// </summary>
-    public partial class Order : Window
+    public partial class Histori : Window
     {
-        Menu clickedMenu;
-        public Order(Menu menu)
+
+        public Histori()
         {
             InitializeComponent();
-            clickedMenu = menu;
-            Grof.ItemsSource = inOrder.Projects.ToList();
-            
-        }
-
-        private void add_Click(object sender, RoutedEventArgs e)
-        {
-            inHistori.Projects = inOrder.Projects;
+            Grof.ItemsSource = inHistori.Projects.ToList();
+            string lol = DateTime.Now.ToString();
         }
     }
 }

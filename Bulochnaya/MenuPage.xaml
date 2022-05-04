@@ -9,12 +9,13 @@
       Title="MenuPage" Background="PeachPuff" Width="1600" Height="900" ResizeMode="NoResize" WindowState="Maximized">
 
     <Grid>
-        <Menu Height="25" VerticalAlignment="Top" Background="LightGray">
+        <Menu Height="25" VerticalAlignment="Top" Background="#FFB85C00">
             <MenuItem Header="Заказы" Click="MenuItem_Click_To_Order">
             </MenuItem>
             <MenuItem Header="Новости" Click="MenuItem_Click_To_News">
             </MenuItem>
             <MenuItem Header="Меню" Height="25" Click="MenuItem_Click_To_Menu"></MenuItem>
+            <MenuItem Header="История" Height="25" Click="MenuItem_Click"></MenuItem>
             <MenuItem x:Name="menu" Header="Добавить новое изделие" Click="menu_Click"/>
         </Menu>
         <TextBlock HorizontalAlignment="Center" Text="История хлебозавода" FontWeight="Bold"  VerticalAlignment="Top" Margin="326,25,336,0" FontSize="36"/>
