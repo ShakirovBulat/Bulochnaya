@@ -24,8 +24,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate x:Name="Grof2">
                     <StackPanel Width="320" Background="#F19561">
-                        <materialDesign:RatingBar x:Name="rating" Value="{Binding Rating}" Margin="95,0,109,0" Width="114" IsEnabled="False" Opacity="1"/>
-                        <Label Content="{Binding Review}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Height="58" Margin="10,0" IsEnabled="True"/>
+                        <Label Content="{Binding ID}" FontSize="20"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
