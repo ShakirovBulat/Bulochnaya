@@ -31,6 +31,7 @@ namespace Bulochnaya.Windows
         private void add_Click(object sender, RoutedEventArgs e)
         {
             inHistori.Projects = inOrder.Projects;
+            MessageBox.Show("Заказ обрабатывается");
         }
     }
 }
