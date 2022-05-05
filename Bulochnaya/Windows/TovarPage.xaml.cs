@@ -11,6 +11,7 @@ namespace Bulochnaya.Windows
     {
         public static Bakery2Entities db;
         Menu clickedMenu;
+        ReviewsTovar revclick;
         public TovarPage(Menu menu)
         {
             InitializeComponent();
@@ -24,11 +25,12 @@ namespace Bulochnaya.Windows
             ggImg.Source = image;
             lbl1Img.Content = menu.Name;
             lbl2Img.Text = menu.Description;
+            Cost.Content = menu.Cost;
         }
 
         private void review_Click(object sender, RoutedEventArgs e)
         {
-            ReviewsPage rev = new ReviewsPage(clickedMenu);
+            ReviewsPage rev = new ReviewsPage(clickedMenu,revclick);
             rev.Show();
             this.Close();
         }

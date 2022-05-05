@@ -46,11 +46,19 @@
             </Button.Background>
         </Button>
         <Image x:Name="img" HorizontalAlignment="Left" Height="100" Margin="52,238,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Style="{StaticResource MyBuutonStyle}" x:Name="download" HorizontalAlignment="Left" Margin="157,243,0,0" VerticalAlignment="Top" Width="109" Height="33" Click="download_Click_1" Cursor="Hand">
+        <Button Style="{StaticResource MyBuutonStyle}" x:Name="download" HorizontalAlignment="Left" Margin="157,260,0,0" VerticalAlignment="Top" Width="109" Height="33" Click="download_Click_1" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="/Bulochnaya;component/Images/downloading.png"/>
             </Button.Background>
         </Button>
+        <TextBox x:Name="cost"  HorizontalAlignment="Left" Height="23" Margin="157,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" Background="#FF5D210B" Foreground="#FFFFFBFB">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="157,213,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.462,0.385"/>
 
 
     </Grid>

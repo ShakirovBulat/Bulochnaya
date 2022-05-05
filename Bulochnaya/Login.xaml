@@ -7,7 +7,7 @@
        mc:Ignorable="d" 
       d:DesignHeight="450"
       Title="Login"
-      Background="#E0D7D7" Width="330.317" Closing="Window_Closing" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+      Background="#E0D7D7" Width="330.317" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style x:Key="MyBuutonStyle" TargetType="Button">
             <Setter Property="Template">

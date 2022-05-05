@@ -10,12 +10,17 @@ namespace Bulochnaya.Windows
     public partial class ReviewsPage : Window
     {
         Bakery2Entities db = new Bakery2Entities();
+        ReviewsTovar revclick;
         Menu clickedmenu;
-        public ReviewsPage(Menu menu)
+        public ReviewsPage(Menu menu, ReviewsTovar rev)
         {
             InitializeComponent();
             clickedmenu = menu;
-            Grof.ItemsSource = db.ReviewsTovar.Where(c => c.Id_Tovar == menu.Id_Tovar).ToList();
+            revclick = rev;
+            Grof.ItemsSource = (from re in db.Reviews join reto in db.ReviewsTovar on re.Id_review equals reto.Id_review 
+                                where re.Id_review == reto.Id_review
+                                where reto.Id_Tovar == clickedmenu.Id_Tovar
+                                select re).ToList();
         }
 
         private void review_Click(object sender, RoutedEventArgs e)
@@ -24,13 +29,6 @@ namespace Bulochnaya.Windows
             AddReviewPage rev = new AddReviewPage(clickedmenu);
             rev.Show();
             this.Close();
-        }
-
-        private void Grof_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var gg = (ReviewsTovar)Grof.SelectedItem;
-            ReviewsTovarPage rov = new ReviewsTovarPage(gg);
-            rov.Show();
         }
     }
 }

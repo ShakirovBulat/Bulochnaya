@@ -13,6 +13,7 @@ namespace Bulochnaya.Windows
         {
             InitializeComponent();
             Grof.ItemsSource = inHistori.Projects.ToList();
+            Grof.CanUserAddRows = false;
         }
     }
 }

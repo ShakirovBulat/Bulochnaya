@@ -39,6 +39,7 @@ namespace Bulochnaya.Windows
             Menu menu = new Menu();
             menu.Name = name.Text.ToString();
             menu.Description = description.Text.ToString();
+            menu.Cost = Convert.ToDecimal(cost.Text);
             
             menu.ImageTovar = File.ReadAllBytes(ofdImage1.FileName);
 

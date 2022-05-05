@@ -20,7 +20,7 @@
         </Style>
     </Window.Resources>
     <Grid x:Name="Tovar">
-        <Image x:Name="ggImg" Margin="68,44,0,0" Height="207" VerticalAlignment="Top" HorizontalAlignment="Left" Width="212" Source="{Binding ImageTovar}" />
+        <Image x:Name="ggImg" Margin="68,44,0,0" Height="147" VerticalAlignment="Top" HorizontalAlignment="Left" Width="212" Source="{Binding ImageTovar}" />
         <Label x:Name="lbl1Img" HorizontalAlignment="Left" Margin="114,0,0,480" VerticalAlignment="Bottom" FontSize="22" Content="{Binding Name}" Height="39" Width="auto"/>
         <TextBlock x:Name="lbl2Img" HorizontalAlignment="Left" Margin="68,256,0,0" VerticalAlignment="Top" Height="209" Width="212" FontSize="18" TextWrapping="Wrap" Text="{Binding Description}"/>
         <Button Style="{StaticResource MyBuutonStyle}" x:Name="review" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Width="109" Height="34" Click="review_Click" Cursor="Hand">
@@ -33,5 +33,8 @@
                 <ImageBrush ImageSource="/Bulochnaya;component/Images/inOrder.png"/>
             </Button.Background>
         </Button>
+        <Label x:Name="Cost" HorizontalAlignment="Left" Margin="68,0,0,270" VerticalAlignment="Bottom" FontSize="22" Content="{Binding Cost}" Height="39" Width="100"/>
+        <Label x:Name="Cost_Copy" HorizontalAlignment="Left" Margin="173,0,0,270" VerticalAlignment="Bottom" FontSize="22" Content="ЦЕНА" Height="39" Width="100"/>
+
     </Grid>
 </Window>

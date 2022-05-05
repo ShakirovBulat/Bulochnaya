@@ -10,7 +10,21 @@
     <Grid>
         <Border Background="Black" BorderBrush="Black" BorderThickness="1" Height="40" VerticalAlignment="Top"/>
         <Label Content="История" HorizontalAlignment="Center" Margin="366,1,328,0" VerticalAlignment="Top" Foreground="White" Width="100" FontSize="22"/>
-        <ListView x:Name="Grof" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" Background="#FFE0D7D7" Margin="0,39,0,0">
+        <DataGrid x:Name="Grof" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Cost}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Время" Binding="{Binding Source={x:Static sys:DateTime.Now}}"></DataGridTextColumn>
+            </DataGrid.Columns>
+            
+                     
+                <!--<Label Content="{Binding Source={x:Static sys:DateTime.Now}}"/>
+                <Label Margin="0,30,0,0" Content="{Binding Name}"/>
+                <Label Margin="100,0,0,0" Content="{Binding Cost}"/>-->
+                        
+                
+        </DataGrid>
+        <!--<ListView x:Name="Grof" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" Background="#FFE0D7D7" Margin="0,39,0,0">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
@@ -27,9 +41,12 @@
                         </Grid.RowDefinitions>
                         <Image Width="300" Grid.Row="1" HorizontalAlignment="Center" Source="{Binding ImageTovar}"/>
                         <Label Content="{Binding Source={x:Static sys:DateTime.Now}}"/>
+                        <Label Margin="0,30,0,0" Content="{Binding Name}"/>
+                        <Label Margin="100,0,0,0" Content="{Binding Cost}"/>
+                        <Label Margin="130,0,0,0" Content="Цена"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
     </Grid>
 </Window>
