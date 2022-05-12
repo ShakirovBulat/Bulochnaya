@@ -38,7 +38,8 @@ namespace Bulochnaya
             Users us = new Users(Convert.ToString(Nickname.Text),
                                  Convert.ToString(email.Text),
                                  Convert.ToString(password.Text),
-                                 double.Parse(phone.Text));
+                                 double.Parse(phone.Text),
+                                 Convert.ToString("2"));
             us.Add(us);
             MessageBox.Show("Занесено в базу!");
             this.Close();

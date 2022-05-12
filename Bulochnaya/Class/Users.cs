@@ -19,13 +19,15 @@ namespace Bulochnaya.Class
         protected string Email;
         protected string Password;
         protected double Phone;
+        protected string Role;
 
-        public Users(string v1, string v2, string v3, double v4)
+        public Users(string v1, string v2, string v3, double v4, string v5)
         {
             this.Name = v1;
             this.Email = v2;
             this.Password = v3;
             this.Phone = v4;
+            this.Role = v5;
         }
 
         public Users()
@@ -39,6 +41,8 @@ namespace Bulochnaya.Class
         public string _password{ get => Password; set => Password = value; }
         [BsonElement]
         public double _phone { get => Phone; set => Phone = value; }
+        [BsonElement]
+        public string _role { get => Role; set => Role = value; }
 
 
 

@@ -41,5 +41,10 @@ namespace Bulochnaya
             menu.Show();
         }
 
+        private void menu_Click(object sender, RoutedEventArgs e)
+        {
+            MenuAddPage menu = new MenuAddPage();
+            menu.Show();
+        }
     }
 }

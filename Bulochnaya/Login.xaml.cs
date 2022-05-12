@@ -41,8 +41,8 @@ namespace Bulochnaya
         {
             var abase = client.GetDatabase("111");
             var b = abase.GetCollection<Users>("Shakirov_DB");
-            var listPerson = b.Find(Bulochnaya => Bulochnaya._name == nickname && Bulochnaya._password == password).ToList().FirstOrDefault();
-            if (nickname == "admin" && password == "gg")
+            var listPerson = b.Find(Bulochnaya => Bulochnaya._name == nickname && Bulochnaya._password == password && Bulochnaya._role == "1" || Bulochnaya._role == "2").ToList().FirstOrDefault();
+            if (listPerson._name == "Admin" && listPerson._password == "gg" && listPerson._role == "1")
             {
                 MessageBox.Show($"Добро пожаловать Администратор");
                 MenuPage wd = new MenuPage();
