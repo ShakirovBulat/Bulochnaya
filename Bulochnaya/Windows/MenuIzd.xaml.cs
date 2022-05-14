@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bulochnaya.Class;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +21,20 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class MenuIzd : Window
     {
+        MongoClient client = new MongoClient();
+
+        Izdelia us = new Izdelia();
         public MenuIzd()
         {
             InitializeComponent();
+            var abase = client.GetDatabase("111");
+            Grof.ItemsSource = abase.GetCollection<Izdelia>("111").AsQueryable();
         }
-
-
+        private void Grof_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var gg = (Menu)Grof.SelectedItem;
+            TovarPage tp = new TovarPage(gg);
+            tp.Show();
+        }
     }
 }
