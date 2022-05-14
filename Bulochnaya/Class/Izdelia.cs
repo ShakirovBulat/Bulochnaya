@@ -6,7 +6,7 @@ using System.Windows;
 
 namespace Bulochnaya.Class
 {
-    class Izdelia
+    public class Izdelia
     {
         [BsonId]
         [BsonIgnoreIfDefault]

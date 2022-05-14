@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bulochnaya.Windows"
         mc:Ignorable="d"
-        Title="TovarPage" Height="450" Width="800">
-    <Grid>
-        
+        Title="TovarPage" Height="550" Width="350" Background="#FFE0D7D7" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="MyBuutonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="Tovar">
+        <Image x:Name="ggImg" Margin="68,44,0,0" Height="147" VerticalAlignment="Top" HorizontalAlignment="Left" Width="212" Source="{Binding _image}" />
+        <Label x:Name="lbl1Img" HorizontalAlignment="Left" Margin="114,0,0,480" VerticalAlignment="Bottom" FontSize="22" Content="{Binding _name}" Height="39" Width="auto"/>
+        <TextBlock x:Name="lbl2Img" HorizontalAlignment="Left" Margin="68,256,0,0" VerticalAlignment="Top" Height="209" Width="212" FontSize="18" TextWrapping="Wrap" Text="{Binding _description}"/>
+        <Button Style="{StaticResource MyBuutonStyle}" x:Name="review" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Width="109" Height="34" Click="review_Click" Cursor="Hand">
+            <Button.Background>
+                <ImageBrush ImageSource="/Bulochnaya;component/Images/reviews.png"/>
+            </Button.Background>
+        </Button>
+        <Button Style="{StaticResource MyBuutonStyle}" x:Name="inorder" HorizontalAlignment="Left" Margin="105,475,0,0" VerticalAlignment="Top" Width="109" Height="34" Click="inorder_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Bulochnaya;component/Images/inOrder.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Cost" HorizontalAlignment="Left" Margin="68,0,0,270" VerticalAlignment="Bottom" FontSize="22" Content="{Binding _cost}" Height="39" Width="100"/>
+        <Label x:Name="Cost_Copy" HorizontalAlignment="Left" Margin="173,0,0,270" VerticalAlignment="Bottom" FontSize="22" Content="ЦЕНА" Height="39" Width="100"/>
+
     </Grid>
 </Window>

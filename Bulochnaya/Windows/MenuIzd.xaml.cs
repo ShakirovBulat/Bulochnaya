@@ -32,7 +32,7 @@ namespace Bulochnaya.Windows
         }
         private void Grof_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var gg = (Menu)Grof.SelectedItem;
+            var gg = (Izdelia)Grof.SelectedItem;
             TovarPage tp = new TovarPage(gg);
             tp.Show();
         }

@@ -266,6 +266,8 @@
     <Resource Include="Images\zavod.jpg" />
     <Resource Include="Images\downloading.png" />
     <Resource Include="Images\Add.png" />
+    <Resource Include="Images\reviews.png" />
+    <Resource Include="Images\inOrder.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
