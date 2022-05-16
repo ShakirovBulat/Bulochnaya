@@ -2,7 +2,7 @@
 using System;
 using System.Windows;
 
-namespace Bulochnaya
+namespace Bulochnaya.Windows
 {
     public partial class Registration : Window
     {

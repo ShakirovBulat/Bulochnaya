@@ -2,7 +2,7 @@
 using Bulochnaya.Windows;
 using System.Windows;
 
-namespace Bulochnaya
+namespace Bulochnaya.Windows
 {
     public partial class MenuPage : Window
     {

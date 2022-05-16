@@ -3,7 +3,7 @@ using MongoDB.Driver;
 using System.Linq;
 using System.Windows;
 
-namespace Bulochnaya
+namespace Bulochnaya.Windows
 {
     public partial class Login : Window
     {

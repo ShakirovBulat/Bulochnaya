@@ -1,4 +1,4 @@
-﻿<Window x:Class="Bulochnaya.Login"
+﻿<Window x:Class="Bulochnaya.Windows.Login"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -35,7 +35,7 @@
                 </Style>
             </Button.Resources>
             <Button.Background>
-                <ImageBrush ImageSource="Images/Vhod.png"/>
+                <ImageBrush ImageSource="/Bulochnaya;component/Images/Vhod.png"/>
             </Button.Background>
         </Button>
 
