@@ -8,7 +8,7 @@
         Title="MenuIzd" Height="900" Width="1600" WindowState="Maximized" ResizeMode="NoResize" Background="#FFE0D7D7">
     <Grid>
         <Border Background="Black" BorderBrush="Black" BorderThickness="1" Height="40" VerticalAlignment="Top"/>
-        <TextBox Width="300" HorizontalAlignment="Right" x:Name="txtName" Background="White" Text="" Margin="0,39,0,793"/>
+        <TextBox Width="300" HorizontalAlignment="Right" x:Name="txtName" Background="White" Text="" Margin="0,39,0,793" TextChanged="txtName_TextChanged"/>
         <Label Content="Меню" HorizontalAlignment="Center" Margin="366,1,328,0" VerticalAlignment="Top" Foreground="White" Width="100" FontSize="22"/>
         <ListView x:Name="Grof" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" SelectionChanged="Grof_SelectionChanged" Background="#FFE0D7D7" Margin="0,78,0,0">
             <ListView.ItemsPanel>
@@ -25,6 +25,9 @@
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
+                        <Label HorizontalAlignment="Center" FontSize="25" Content="{Binding _name}"/>
+                        <Label HorizontalAlignment="Center" Margin="0,30,0,0" FontSize="25" Content="{Binding _cost}"/>
+                        <Label HorizontalAlignment="Center" Margin="150,30,0,0" FontSize="25" Content="Цена"/>
                         <Image Width="300" Grid.Row="1"  HorizontalAlignment="Center" Source="{Binding _image}"/>
                     </Grid>
                 </DataTemplate>

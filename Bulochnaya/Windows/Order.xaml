@@ -5,8 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bulochnaya.Windows"
         mc:Ignorable="d"
-        Title="Order" Height="450" Width="800" ResizeMode="NoResize" WindowState="Maximized">
+        Title="Order" Height="450" Width="800" ResizeMode="NoResize" WindowState="Maximized" Background="#FFE0D7D7">
     <Grid>
-        
+        <Border Background="Black" BorderBrush="Black" BorderThickness="1" Height="40" VerticalAlignment="Top"/>
+        <Label Content="Заказы" HorizontalAlignment="Center" Margin="361,1,334,0" VerticalAlignment="Top" Foreground="White" Width="99" FontSize="22"/>
+        <ListView x:Name="Grof" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" Background="#FFE0D7D7" Margin="0,39,0,0">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="20" Width="400">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"></RowDefinition>
+                            <RowDefinition Height="310"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Width="300" Grid.Row="1" HorizontalAlignment="Center" Source="{Binding _image}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="add" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="126" Height="44" Click="add_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource="/Bulochnaya;component/Images/Order.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bulochnaya.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace Bulochnaya
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static InProcess proc = new InProcess();
         public MainWindow()
         {
             InitializeComponent();

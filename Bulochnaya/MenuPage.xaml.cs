@@ -1,4 +1,5 @@
-﻿using Bulochnaya.Windows;
+﻿using Bulochnaya.Class;
+using Bulochnaya.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace Bulochnaya
 {
     public partial class MenuPage : Window
     {
+        Izdelia izdclicked;
         public MenuPage()
         {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace Bulochnaya
 
         private void MenuItem_Click_To_Order(object sender, RoutedEventArgs e)
         {
-            Order ord = new Order();
+            Order ord = new Order(izdclicked);
             ord.Show();
         }
 

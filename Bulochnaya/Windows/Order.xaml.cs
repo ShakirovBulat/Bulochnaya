@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bulochnaya.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,24 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class Order : Window
     {
-        public Order()
+        Izdelia izdclicked;
+        InProcess us = new InProcess();
+        public Order(Izdelia izd)
         {
             InitializeComponent();
+            izdclicked = izd;
+            Grof.ItemsSource = Orders.Projects.ToList();
+        }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            InProcess us = new InProcess(MainWindow.proc._name,
+                MainWindow.proc._email,
+                MainWindow.proc._nametovar,
+                MainWindow.proc._costtovar,
+                MainWindow.proc._phone);
+            us.Add(us);
+            MessageBox.Show("Заказ обрабатывается");
         }
     }
 }

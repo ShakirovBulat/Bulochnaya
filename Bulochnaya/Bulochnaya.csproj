@@ -140,7 +140,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class\InProcess.cs" />
     <Compile Include="Class\Izdelia.cs" />
+    <Compile Include="Class\Orders.cs" />
     <Compile Include="Class\Users.cs" />
     <Compile Include="MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
@@ -268,6 +270,7 @@
     <Resource Include="Images\Add.png" />
     <Resource Include="Images\reviews.png" />
     <Resource Include="Images\inOrder.png" />
+    <Resource Include="Images\Order.png" />
     <Content Include="mongocrypt.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

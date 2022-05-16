@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Bulochnaya"
       mc:Ignorable="d" 
       d:DesignHeight="900" d:DesignWidth="1440"
-      Title="MenuPage" Background="PeachPuff" Width="1920" Height="1080">
+      Title="MenuPage" Background="PeachPuff" Width="1920" Height="1080" ResizeMode="NoResize" WindowState="Maximized">
 
     <Grid>
         <Menu Height="25" VerticalAlignment="Top" Background="LightGray">

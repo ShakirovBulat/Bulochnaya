@@ -21,9 +21,11 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class TovarPage : Window
     {
+        Izdelia izdclicked;
         public TovarPage(Izdelia izd)
         {
             InitializeComponent();
+            izdclicked = izd;
             MemoryStream byteStream = new MemoryStream(izd._image);
             BitmapImage image = new BitmapImage();
             image.BeginInit();
@@ -35,14 +37,11 @@ namespace Bulochnaya.Windows
             Cost.Content = izd._cost;
         }
 
-        private void review_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void inorder_Click(object sender, RoutedEventArgs e)
         {
-
+            Orders.Projects.Add(izdclicked);
+            MainWindow.proc._nametovar = izdclicked._name;
+            MainWindow.proc._costtovar = izdclicked._cost;
         }
     }
 }

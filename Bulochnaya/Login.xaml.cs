@@ -23,9 +23,9 @@ namespace Bulochnaya
     /// </summary>
     public partial class Login : Window
     {
+
         MongoClient client = new MongoClient();
         
-        Users us = new Users();
         public Login()
         {
             InitializeComponent();
@@ -44,6 +44,9 @@ namespace Bulochnaya
             var listPerson = b.Find(Bulochnaya => Bulochnaya._name == nickname && Bulochnaya._password == password && Bulochnaya._role == "1" || Bulochnaya._role == "2").ToList().FirstOrDefault();
             if (listPerson._name == "Admin" && listPerson._password == "gg" && listPerson._role == "1")
             {
+                MainWindow.proc._name= listPerson._name;
+                MainWindow.proc._email = listPerson._email;
+                MainWindow.proc._phone = listPerson._phone;
                 MessageBox.Show($"Добро пожаловать Администратор");
                 MenuPage wd = new MenuPage();
                 wd.Show();
@@ -56,6 +59,9 @@ namespace Bulochnaya
             }
             else if (listPerson != null)
             {
+                MainWindow.proc._name = listPerson._name;
+                MainWindow.proc._email = listPerson._email;
+                MainWindow.proc._phone = listPerson._phone;
                 MessageBox.Show($"Добро пожаловать {nickname}");
                 MenuPage wd = new MenuPage();
                 wd.Show();
@@ -66,7 +72,6 @@ namespace Bulochnaya
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
             Auth(nickname.Text, password.Text);
         }
     }
