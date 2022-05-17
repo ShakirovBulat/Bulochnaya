@@ -1,5 +1,6 @@
 ﻿using Bulochnaya.Class;
 using MongoDB.Driver;
+using System;
 using System.Linq;
 using System.Windows;
 
@@ -26,7 +27,7 @@ namespace Bulochnaya.Windows
             var abase = client.GetDatabase("111");
             var b = abase.GetCollection<Users>("Shakirov_DB");
             var listPerson = b.Find(Bulochnaya => Bulochnaya._name == nickname && Bulochnaya._password == password && Bulochnaya._role == "1" || Bulochnaya._role == "2").ToList().FirstOrDefault();
-            if (listPerson._name == "Admin" && listPerson._password == "gg" && listPerson._role == "1")
+            if (listPerson._role == "1")
             {
                 MainWindow.proc._name= listPerson._name;
                 MainWindow.proc._email = listPerson._email;
@@ -41,7 +42,7 @@ namespace Bulochnaya.Windows
                 MessageBox.Show("Введите логин и пароль или введены неправильные данные");
                 return false;
             }
-            else if (listPerson != null)
+            else if (listPerson._name == nickname && listPerson._password == password && listPerson._role == "2")
             {
                 MainWindow.proc._name = listPerson._name;
                 MainWindow.proc._email = listPerson._email;
