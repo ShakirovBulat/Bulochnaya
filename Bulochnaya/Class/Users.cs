@@ -50,17 +50,5 @@ namespace Bulochnaya.Class
             var b = abase.GetCollection<Users>("Shakirov_DB");
             b.InsertOne(us);
         }
-        public void FindFrom(Users us)
-        {
-            MongoClient client = new MongoClient();
-            var abase = client.GetDatabase("111");
-            var b = abase.GetCollection<Users>("Shakirov_DB");
-            var listPerson = b.Find(Bulochnaya => us._name == "").ToList();
-            var listPersonP = b.Find(Bulochnaya => us._password == "").ToList();
-            foreach (Users us1 in listPerson)
-            {
-                MessageBox.Show($"{us._name}" + $"{us._password}");
-            }
-        }
     }
 }
