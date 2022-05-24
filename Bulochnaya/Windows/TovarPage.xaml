@@ -30,6 +30,5 @@
         </Button>
         <Label x:Name="Cost" HorizontalAlignment="Left" Margin="68,0,0,270" VerticalAlignment="Bottom" FontSize="22" Content="{Binding _cost}" Height="39" Width="100"/>
         <Label x:Name="Cost_Copy" HorizontalAlignment="Left" Margin="173,0,0,270" VerticalAlignment="Bottom" FontSize="22" Content="ЦЕНА" Height="39" Width="100"/>
-
     </Grid>
 </Window>

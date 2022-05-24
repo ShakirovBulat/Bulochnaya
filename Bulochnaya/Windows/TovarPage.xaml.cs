@@ -1,4 +1,5 @@
 ﻿using Bulochnaya.Class;
+using MongoDB.Driver;
 using System.IO;
 using System.Windows;
 using System.Windows.Media.Imaging;
@@ -7,6 +8,7 @@ namespace Bulochnaya.Windows
 {
     public partial class TovarPage : Window
     {
+        MongoClient client = new MongoClient();
         Izdelia izdclicked;
         public TovarPage(Izdelia izd)
         {
@@ -29,5 +31,6 @@ namespace Bulochnaya.Windows
             MainWindow.proc._nametovar = izdclicked._name;
             MainWindow.proc._costtovar = izdclicked._cost;
         }
+
     }
 }

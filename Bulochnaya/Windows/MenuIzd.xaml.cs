@@ -38,5 +38,13 @@ namespace Bulochnaya.Windows
         {
             CollectionViewSource.GetDefaultView(Grof.ItemsSource).Refresh();
         }
+
+        private void inorder_Click(object sender, RoutedEventArgs e)
+        {
+            var gg = (Izdelia)Grof.SelectedItem;
+            var abase = client.GetDatabase("111");
+            var b = abase.GetCollection<Izdelia>("111");
+            b.FindOneAndDelete(gg.ToString());
+        }
     }
 }
