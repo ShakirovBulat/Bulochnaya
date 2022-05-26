@@ -16,12 +16,6 @@ namespace Bulochnaya.Windows
             InitializeComponent();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            MainWindow wd = new MainWindow();
-            wd.Show();
-        }
-
         public bool Auth(string nickname, string password)
         {
             var abase = client.GetDatabase("111");
@@ -43,6 +37,7 @@ namespace Bulochnaya.Windows
                     MenuPage wd = new MenuPage();
                     wd.Show();
                     wd.menu.Visibility = Visibility.Visible;
+                    this.Close();
                 }
                 
                 else if (listPerson._name == nickname && listPerson._password == password && listPerson._role == "2")
@@ -54,6 +49,7 @@ namespace Bulochnaya.Windows
                     MenuPage wd = new MenuPage();
                     wd.Show();
                     wd.menu.Visibility = Visibility.Hidden;
+                    this.Close();
                 }
             }
             catch
