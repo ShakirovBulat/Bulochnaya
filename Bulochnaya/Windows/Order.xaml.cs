@@ -21,7 +21,8 @@ namespace Bulochnaya.Windows
                 MainWindow.proc._email,
                 MainWindow.proc._nametovar,
                 MainWindow.proc._costtovar,
-                MainWindow.proc._phone);
+                MainWindow.proc._phone,
+                MainWindow.proc._role);
             us.Add(us);
             MessageBox.Show("Заказ обрабатывается");
         }

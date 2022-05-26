@@ -33,6 +33,7 @@ namespace Bulochnaya.Windows
                     MainWindow.proc._name = listPerson._name;
                     MainWindow.proc._email = listPerson._email;
                     MainWindow.proc._phone = listPerson._phone;
+                    MainWindow.proc._role = listPerson._role;
                     MessageBox.Show($"Добро пожаловать Администратор");
                     MenuPage wd = new MenuPage();
                     wd.Show();
@@ -45,6 +46,7 @@ namespace Bulochnaya.Windows
                     MainWindow.proc._name = listPerson._name;
                     MainWindow.proc._email = listPerson._email;
                     MainWindow.proc._phone = listPerson._phone;
+                    MainWindow.proc._role = listPerson._role;
                     MessageBox.Show($"Добро пожаловать {nickname}");
                     MenuPage wd = new MenuPage();
                     wd.Show();

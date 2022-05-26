@@ -27,6 +27,10 @@ namespace Bulochnaya.Windows
         private void MenuItem_Click_To_Menu(object sender, RoutedEventArgs e)
         {
             MenuIzd menu = new MenuIzd();
+            if(MainWindow.proc._role == "2")
+            {
+                menu.inorder.Visibility = Visibility.Hidden;
+            }
             menu.Show();
         }
 

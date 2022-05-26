@@ -14,14 +14,16 @@ namespace Bulochnaya.Class
         protected string NameTovar;
         protected double CostTovar;
         protected double Phone;
+        protected string Role;
 
-        public InProcess(string v1, string v2, string v3, double v4, double v5)
+        public InProcess(string v1, string v2, string v3, double v4, double v5, string v6)
         {
             this.NameUser = v1;
             this.Email = v2;
             this.NameTovar = v3;
             this.CostTovar = v4;
             this.Phone = v5;
+            this.Role = v6;
         }
 
         public InProcess()
@@ -37,6 +39,9 @@ namespace Bulochnaya.Class
         public double _costtovar { get => CostTovar; set => CostTovar = value; }
         [BsonElement]
         public double _phone { get => Phone; set => Phone = value; }
+        [BsonElement]
+        public string _role { get => Role; set => Role = value; }
+
 
         public void Add(InProcess us)
         {
