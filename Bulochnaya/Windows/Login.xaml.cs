@@ -19,7 +19,7 @@ namespace Bulochnaya.Windows
         public bool Auth(string nickname, string password)
         {
             var abase = client.GetDatabase("111");
-            var b = abase.GetCollection<Users>("Shakirov_DB");
+            var b = abase.GetCollection<Users>("Users");
             var listPerson = b.Find(Bulochnaya => Bulochnaya._name == nickname && Bulochnaya._password == password ).ToList().FirstOrDefault();
             try
             {

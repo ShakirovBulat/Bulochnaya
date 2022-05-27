@@ -41,7 +41,7 @@ namespace Bulochnaya.Class
         {
             MongoClient client = new MongoClient();
             var abase = client.GetDatabase("111");
-            var b = abase.GetCollection<Izdelia>("111");
+            var b = abase.GetCollection<Izdelia>("Izdelia");
             b.InsertOne(us);
         }
     }

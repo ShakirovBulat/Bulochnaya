@@ -17,7 +17,7 @@ namespace Bulochnaya.Windows
         {
             InitializeComponent();
             var abase = client.GetDatabase("111");
-            Grof.ItemsSource = abase.GetCollection<Izdelia>("111").AsQueryable();
+            Grof.ItemsSource = abase.GetCollection<Izdelia>("Izdelia").AsQueryable();
             CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(Grof.ItemsSource);
             view.Filter = UserFilter;
         }
@@ -43,7 +43,7 @@ namespace Bulochnaya.Windows
         {
             var gg = (Izdelia)Grof.SelectedItem;
             var abase = client.GetDatabase("111");
-            var b = abase.GetCollection<Izdelia>("111");
+            var b = abase.GetCollection<Izdelia>("Izdelia");
             b.FindOneAndDelete(gg.ToString());
         }
     }
