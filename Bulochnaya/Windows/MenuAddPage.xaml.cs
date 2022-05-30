@@ -33,13 +33,22 @@ namespace Bulochnaya.Windows
 
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            Izdelia us = new Izdelia(Convert.ToString(name.Text),
-                                 Convert.ToString(description.Text),
-                                 double.Parse(cost.Text),
-                                 File.ReadAllBytes(ofdImage1.FileName));
-            us.Add(us);
-            MessageBox.Show("Занесено в базу!");
-            this.Close();
+            try
+            {
+
+
+                Izdelia us = new Izdelia(Convert.ToString(name.Text),
+                                     Convert.ToString(description.Text),
+                                     double.Parse(cost.Text),
+                                     File.ReadAllBytes(ofdImage1.FileName));
+                us.Add(us);
+                MessageBox.Show("Занесено в базу!");
+                this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Заполните все данные!");
+            }
         }
     }
 }
