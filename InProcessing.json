@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "6285e8c786028b1e2f8efa97"
+  },
+  "_name": "nick",
+  "_email": "a2009@mail.ru",
+  "_nametovar": "Булка с Маком",
+  "_costtovar": 300,
+  "_phone": 648579234678
+}]

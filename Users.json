@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "629486755f18f27a79084863"
+  },
+  "_name": "Admin",
+  "_email": "a2009-1@mail.ru",
+  "_password": "ggg",
+  "_phone": 89655881468,
+  "_role": "1"
+},{
+  "_id": {
+    "$oid": "6294868e5f18f27a79084864"
+  },
+  "_name": "Nick",
+  "_email": "rifrif2003@mail.ru",
+  "_password": "gg",
+  "_phone": 8784325634,
+  "_role": "2"
+}]
