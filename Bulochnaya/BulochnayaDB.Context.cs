@@ -15,10 +15,10 @@ namespace Bulochnaya
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Bakery2Entities : DbContext
+    public partial class BakeryEntities : DbContext
     {
-        public Bakery2Entities()
-            : base("name=Bakery2Entities")
+        public BakeryEntities()
+            : base("name=BakeryEntities")
         {
         }
     

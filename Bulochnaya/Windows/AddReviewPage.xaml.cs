@@ -22,7 +22,7 @@ namespace Bulochnaya.Windows
             rev.Rating = BasicRatingBar.Value;
             rev.Id = Login.logUser.Id;
             rev2.Id_Tovar = clickedmenu.Id_Tovar;
-            rev2.Id_review = rev.Id_review;
+            rev2.Id_review = rev.Id_Review;
             
 
             MainWindow.db.Reviews.Add(rev);

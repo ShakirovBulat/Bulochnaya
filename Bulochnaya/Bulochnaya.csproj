@@ -155,25 +155,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Bulochnaya_BD.Context.cs">
+    <Compile Include="BulochnayaDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Bulochnaya_BD.Context.tt</DependentUpon>
+      <DependentUpon>BulochnayaDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Bulochnaya_BD.cs">
+    <Compile Include="BulochnayaDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>BulochnayaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Bulochnaya_BD.Designer.cs">
+    <Compile Include="BulochnayaDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Bulochnaya_BD.edmx</DependentUpon>
+      <DependentUpon>BulochnayaDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="inHistori.cs" />
     <Compile Include="inOrder.cs" />
     <Compile Include="Menu.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>BulochnayaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
@@ -185,22 +185,22 @@
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Reviews.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>BulochnayaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ReviewsTovar.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>BulochnayaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>BulochnayaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>BulochnayaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>BulochnayaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
-      <DependentUpon>Bulochnaya_BD.tt</DependentUpon>
+      <DependentUpon>BulochnayaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Windows\AddReviewPage.xaml.cs">
       <DependentUpon>AddReviewPage.xaml</DependentUpon>
@@ -213,9 +213,6 @@
     </Compile>
     <Compile Include="Windows\MenuIzd.xaml.cs">
       <DependentUpon>MenuIzd.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\News.xaml.cs">
-      <DependentUpon>News.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Order.xaml.cs">
       <DependentUpon>Order.xaml</DependentUpon>
@@ -266,10 +263,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\News.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Windows\Order.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -301,12 +294,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Bulochnaya_BD.edmx">
+    <EntityDeploy Include="BulochnayaDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Bulochnaya_BD.Designer.cs</LastGenOutput>
+      <LastGenOutput>BulochnayaDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Bulochnaya_BD.edmx.diagram">
-      <DependentUpon>Bulochnaya_BD.edmx</DependentUpon>
+    <None Include="BulochnayaDB.edmx.diagram">
+      <DependentUpon>BulochnayaDB.edmx</DependentUpon>
     </None>
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
@@ -343,15 +336,15 @@
     <Resource Include="Images\addreview.png" />
     <Resource Include="Images\Go.png" />
     <Resource Include="Images\Order.png" />
-    <Content Include="Bulochnaya_BD.Context.tt">
+    <Content Include="BulochnayaDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Bulochnaya_BD.edmx</DependentUpon>
-      <LastGenOutput>Bulochnaya_BD.Context.cs</LastGenOutput>
+      <DependentUpon>BulochnayaDB.edmx</DependentUpon>
+      <LastGenOutput>BulochnayaDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Bulochnaya_BD.tt">
+    <Content Include="BulochnayaDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Bulochnaya_BD.edmx</DependentUpon>
-      <LastGenOutput>Bulochnaya_BD.cs</LastGenOutput>
+      <DependentUpon>BulochnayaDB.edmx</DependentUpon>
+      <LastGenOutput>BulochnayaDB.cs</LastGenOutput>
     </Content>
     <Content Include="mongocrypt.dll" />
   </ItemGroup>

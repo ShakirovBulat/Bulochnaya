@@ -9,14 +9,14 @@ namespace Bulochnaya.Windows
     /// </summary>
     public partial class TovarPage : Window
     {
-        public static Bakery2Entities db;
+        public static BakeryEntities db;
         Menu clickedMenu;
         ReviewsTovar revclick;
         public TovarPage(Menu menu)
         {
             InitializeComponent();
             clickedMenu = menu;
-            db = new Bakery2Entities();
+            db = new BakeryEntities();
             MemoryStream byteStream = new MemoryStream(menu.ImageTovar);
             BitmapImage image = new BitmapImage();
             image.BeginInit();

@@ -20,10 +20,10 @@ namespace Bulochnaya
             this.ReviewsTovar = new HashSet<ReviewsTovar>();
         }
     
-        public int Id_review { get; set; }
+        public int Id_Review { get; set; }
         public string Review { get; set; }
-        public Nullable<double> Rating { get; set; }
-        public Nullable<int> Id { get; set; }
+        public Nullable<int> Rating { get; set; }
+        public int Id { get; set; }
     
         public virtual Users Users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

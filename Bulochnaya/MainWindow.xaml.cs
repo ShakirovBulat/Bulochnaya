@@ -7,7 +7,7 @@ namespace Bulochnaya
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static Bakery2Entities db = new Bakery2Entities();
+        public static BakeryEntities db = new BakeryEntities();
         public static Users authUser;
         public MainWindow()
         {

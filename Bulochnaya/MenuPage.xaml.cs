@@ -17,11 +17,7 @@ namespace Bulochnaya
             ord.Show();
         }
 
-        private void MenuItem_Click_To_News(object sender, RoutedEventArgs e)
-        {
-            News s = new News();
-            s.Show();
-        }
+
 
         private void MenuItem_Click_To_Menu(object sender, RoutedEventArgs e)
         {

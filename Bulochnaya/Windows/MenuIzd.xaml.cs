@@ -8,11 +8,11 @@ namespace Bulochnaya.Windows
 {
     public partial class MenuIzd : Window
     {
-        public static Bakery2Entities db = new Bakery2Entities();
+        public static BakeryEntities db = new BakeryEntities();
         public MenuIzd()
         {
             InitializeComponent();
-            db = new Bakery2Entities();
+            db = new BakeryEntities();
             Grof.ItemsSource = db.Menu.ToList();
             CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(Grof.ItemsSource);
             view.Filter = UserFilter;

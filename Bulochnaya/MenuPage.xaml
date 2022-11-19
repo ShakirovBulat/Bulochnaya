@@ -11,9 +11,7 @@
     <Grid>
         <Menu Height="25" VerticalAlignment="Top" Background="#FFB85C00">
             <MenuItem Header="Заказы" Click="MenuItem_Click_To_Order">
-            </MenuItem>
-            <MenuItem Header="Новости" Click="MenuItem_Click_To_News">
-            </MenuItem>
+            </MenuItem> >
             <MenuItem Header="Меню" Height="25" Click="MenuItem_Click_To_Menu"></MenuItem>
             <MenuItem Header="История" Height="25" Click="MenuItem_Click"></MenuItem>
             <MenuItem x:Name="menu" Header="Добавить новое изделие" Click="menu_Click"/>
